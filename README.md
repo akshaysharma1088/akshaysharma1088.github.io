@@ -1,20 +1,17 @@
-# GitHub Pages Starter
+# Akshay Sharma — GitHub Pages
 
-A minimal, no-build personal site you can publish with GitHub Pages.
+This is the no-build personal site for **akshaysharma1088**.
 
-## Quick start
+## Publish
 
-1. **Rename** the repo to either:
-   - `username.github.io` for a *user/organization* site, or
-   - any name (e.g. `portfolio`) for a *project* site.
-2. **Commit** these files to the `main` branch.
-3. In **Settings → Pages**, set **Source** to `Deploy from a branch`, then choose `main` and root `/`.
-4. The site will be live at:
-   - `https://username.github.io` (user site), or
-   - `https://username.github.io/reponame/` (project site).
+1. Create a public repo named **akshaysharma1088.github.io** for a user site (recommended), or any name for a project site.
+2. Upload these files to the **main** branch.
+3. Settings → Pages → Source: *Deploy from a branch* → Branch: `main`, Folder: `/`.
+4. Your URL will be:
+   - `https://akshaysharma1088.github.io` (user site), or
+   - `https://akshaysharma1088.github.io/<reponame>/` (project site).
 
 ## Customize
-
-- Edit `index.html` content.
-- Put images in `assets/` and reference them with `<img src="assets/your-image.jpg">`.
-- Optionally add `resume.pdf` to the repo root and update the link.
+- Update the résumé: place `resume.pdf` at the repo root.
+- Edit `index.html` sections and add images to `assets/`.
+- Add more project cards by duplicating a `<article class="card">…</article>` block.
