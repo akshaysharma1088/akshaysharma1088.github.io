@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>👋 Your Name — Portfolio</title>
+  <meta name="description" content="Personal site and portfolio" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="#">Your Name</a>
+      <button class="menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn" href="resume.pdf">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <section class="hero container">
+      <h1>Hi, I'm <span class="accent">Your Name</span>.</h1>
+      <p class="lead">Principal Data Engineer · Data Science Grad · Builder of reliable data platforms.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">See Projects</a>
+        <a class="btn secondary" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <p>
+        Brief intro about you—what you work on, what you love, and what you’re looking for.
+        Replace this text in <code>index.html</code>. You can add images to <code>assets/</code> and reference them here.
+      </p>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>One-liner about what it is and why it matters.</p>
+          <a class="link" href="https://github.com/yourname/project-one" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>What problem it solves, key tech used, and outcomes.</p>
+          <a class="link" href="https://github.com/yourname/project-two" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>Any demo link or blog post you want to feature.</p>
+          <a class="link" href="https://your-demo-link.example" target="_blank" rel="noopener">Live demo →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <ul class="contact">
+        <li>📬 <a href="mailto:you@example.com">you@example.com</a></li>
+        <li>💼 <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li>🐙 <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Name. Built with ❤️ and GitHub Pages.</p>
+    </div>
+  </footer>
+  <script src="assets/script.js"></script>
+</body>
+</html>
