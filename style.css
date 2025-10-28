@@ -1,0 +1,46 @@
+/* Minimal, clean styles tuned for GitHub Pages */
+:root{
+  --bg:#0b0c10;
+  --panel:#121318;
+  --text:#e6e6e6;
+  --muted:#a0a0a0;
+  --accent:#64ffda;
+  --border:#242632;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1000px;margin:0 auto;padding:0 1rem}
+.section{padding:3rem 0}
+h1,h2,h3{line-height:1.2;margin:0 0 .5rem}
+h1{font-size:2.2rem}
+h2{font-size:1.6rem;margin-bottom:1rem}
+h3{font-size:1.1rem}
+.lead{color:var(--muted);max-width:60ch}
+.accent{color:var(--accent)}
+.btn{display:inline-block;padding:.6rem 1rem;border:1px solid var(--accent);border-radius:.6rem}
+.btn.secondary{border-color:var(--border);color:var(--text)}
+.site-header{position:sticky;top:0;background:rgba(11,12,16,.8);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid var(--border);z-index:10}
+.nav{display:flex;align-items:center;gap:1rem;min-height:56px}
+.brand{font-weight:700}
+.menu-btn{display:none;background:transparent;border:0;font-size:1.3rem;color:var(--text)}
+.nav-links{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:1rem;align-items:center}
+.hero{padding:4rem 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:1rem;padding:1rem}
+.link{display:inline-block;margin-top:.5rem}
+.contact{list-style:none;padding:0;margin:0;display:flex;gap:1rem;flex-wrap:wrap}
+.site-footer{border-top:1px solid var(--border);padding:2rem 0;color:var(--muted);margin-top:2rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .grid{grid-template-columns:1fr}
+  .menu-btn{display:block}
+  .nav-links{display:none;flex-direction:column;align-items:flex-start;background:var(--panel);border:1px solid var(--border);position:absolute;right:1rem;top:56px;padding:.75rem;border-radius:.75rem}
+  .nav-links.show{display:flex}
+}
