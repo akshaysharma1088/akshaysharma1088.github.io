@@ -1,71 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Akshay Sharma — Portfolio</title>
   <meta name="description" content="Akshay Sharma • Principal Data Engineer & Data Science Portfolio" />
+  <meta property="og:title" content="Akshay Sharma — Portfolio" />
+  <meta property="og:description" content="Principal Data Engineer • M.S. Data Science • Reliable and ethical data platforms." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preload" href="assets/style.css" as="style">
   <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
     <nav class="container nav">
-      <a class="brand" href="#">Akshay Sharma</a>
-      <button class="menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+      <a class="brand" href="#top" aria-label="Home">Akshay Sharma</a>
+      <button class="menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
       <ul id="nav-links" class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a class="btn" href="resume.pdf">Résumé</a></li>
+        <li><button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero container">
-      <h1>Hi, I'm <span class="accent">Akshay</span>.</h1>
-      <p class="lead">Principal Data Engineer • M.S. Data Science • I design reliable, ethical, and scalable data platforms.</p>
+  <!-- Animated Background -->
+  <div class="bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <main id="main">
+    <section class="hero container reveal">
+      <p class="eyebrow">Principal Data Engineer · M.S. Data Science</p>
+      <h1 class="hero-title">I build <span class="accent">reliable</span>, <span class="accent2">ethical</span>, and <span class="accent3">scalable</span> data platforms.</h1>
+      <p class="lead">Focused on medallion architecture, domain‑driven design for credit‑card systems, and applied ML (fraud detection, credit line prediction).</p>
       <div class="cta">
         <a class="btn" href="#projects">See Projects</a>
         <a class="btn secondary" href="#contact">Get in touch</a>
       </div>
+      <div class="hero-metrics">
+        <div class="kpi"><span class="num" data-target="10">0</span>+ yrs <span>Data Engineering</span></div>
+        <div class="kpi"><span class="num" data-target="5">0</span>+ yrs <span>Financial domain</span></div>
+        <div class="kpi"><span class="num" data-target="25">0</span>+ <span>Projects</span></div>
+      </div>
+      <svg class="divider" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z"></path>
+      </svg>
     </section>
 
-    <section id="about" class="section container">
+    <section id="about" class="section container reveal">
       <h2>About</h2>
       <p>
-        I build data platforms and analytics that power financial products. My interests include medallion architecture,
-        domain-driven design for credit-card systems, and applied ML (fraud detection, credit-line increase prediction).
-        This site collects selected projects, write-ups, and talks.
+        I design and operate data platforms that power financial products. I care about correctness, observability, and
+        pragmatic architecture. Tooling I enjoy: Snowflake, Databricks, Airflow, dbt, and thoughtful dashboards. I also
+        teach, write, and build demos that make complex ideas simple.
       </p>
+      <ul class="badges">
+        <li>Medallion Architecture</li>
+        <li>Domain‑Driven Design</li>
+        <li>Fraud Detection</li>
+        <li>MLOps</li>
+        <li>Data Quality</li>
+      </ul>
     </section>
 
     <section id="projects" class="section container">
-      <h2>Projects</h2>
+      <h2 class="reveal">Featured Projects</h2>
       <div class="grid">
+        
+          <article class="card tilt reveal" tabindex="0">
+            <div class="card-body">
+              <h3>Proactive Credit Line Prediction</h3>
+              <p>Identify customers for targeted credit line increases with interpretable ML and robust MLOps.</p>
+              <a class="link" href="https://github.com/akshaysharma1088/Credit_Line_Prediction" target="_blank" rel="noopener">Open →</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <h3>Proactive Credit Line Prediction</h3>
-          <p>Identify customers for targeted credit line increases with interpretable ML.</p>
-          <a class="link" href="https://github.com/akshaysharma1088/Credit_Line_Prediction" target="_blank" rel="noopener">Open →</a>
-        </article>
+          <article class="card tilt reveal" tabindex="0">
+            <div class="card-body">
+              <h3>Credit Card Fraud Detection</h3>
+              <p>End‑to‑end pipeline: EDA → features → benchmarking → explainability and risk controls.</p>
+              <a class="link" href="https://github.com/akshaysharma1088/Credit-Card-Fraud-Detection" target="_blank" rel="noopener">Open →</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <h3>Credit Card Fraud Detection</h3>
-          <p>End‑to‑end pipeline: EDA → feature engineering → model benchmarking with explainability.</p>
-          <a class="link" href="https://github.com/akshaysharma1088/Credit-Card-Fraud-Detection" target="_blank" rel="noopener">Open →</a>
-        </article>
-
-        <article class="card">
-          <h3>All Repositories</h3>
-          <p>Explore my full set of projects and coursework on GitHub.</p>
-          <a class="link" href="https://github.com/akshaysharma1088?tab=repositories" target="_blank" rel="noopener">Open →</a>
-        </article>
+          <article class="card tilt reveal" tabindex="0">
+            <div class="card-body">
+              <h3>All Repositories</h3>
+              <p>Explore my full set of projects and coursework on GitHub.</p>
+              <a class="link" href="https://github.com/akshaysharma1088?tab=repositories" target="_blank" rel="noopener">Open →</a>
+            </div>
+          </article>
       </div>
     </section>
 
-    <section id="contact" class="section container">
+    <section id="experience" class="section container reveal">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Principal Data Engineer — Financial Services</h3>
+            <p>Led platform modernization: ingestion, quality, lineage, and ML enablement. Mentored teams and set best practices.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Senior Data Engineer — Retail & Growth</h3>
+            <p>Shipped reliable batch/streaming pipelines, delivered analytics with measurable business impact.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="contact" class="section container reveal">
       <h2>Contact</h2>
+      <p>Say hello — I’m open to collaboration and opportunities.</p>
       <ul class="contact">
         <li>🐙 <a href="https://github.com/akshaysharma1088" target="_blank" rel="noopener">github.com/akshaysharma1088</a></li>
         <li>💼 <a href="https://www.linkedin.com/in/akshay-sharma-1088" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -79,6 +141,7 @@
       <p>© <span id="year"></span> Akshay Sharma. Built with ❤️ and GitHub Pages.</p>
     </div>
   </footer>
+
   <script src="assets/script.js"></script>
 </body>
 </html>
