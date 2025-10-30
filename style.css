@@ -5,14 +5,31 @@
 body{background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;overflow-x:hidden}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 1rem}.section{padding:4rem 0}
-h1,h2,h3{line-height:1.2;margin:0 0 .75rem}h1{font-size:clamp(2rem,4vw,3rem)}h2{font-size:clamp(1.5rem,2.6vw,2rem)}h3{font-size:1.1rem}
+/* MODERNIZATION: Bolder, larger headings */
+h1{font-size:clamp(2.5rem,5.5vw,4rem); font-weight:900;}
+h2{font-size:clamp(1.8rem,3vw,2.4rem); font-weight:700;}
+h3{font-size:1.1rem}
 .lead{color:var(--muted);max-width:70ch}.eyebrow{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-size:.85rem;margin:.5rem 0 1rem}
 .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}.skip:focus{left:1rem;top:1rem;width:auto;height:auto;background:#fff;color:#000;padding:.5rem;border-radius:.5rem;z-index:1000}
 .site-header{position:sticky;top:0;z-index:50;background:rgba(8,11,17,.5);backdrop-filter:saturate(120%) blur(10px);border-bottom:1px solid var(--panel-border);transition:all .3s ease}
 .nav{display:flex;align-items:center;gap:1rem;min-height:64px}.brand{font-weight:800;letter-spacing:.2px}
 .menu-btn{display:none;background:transparent;border:0;color:var(--text);font-size:1.3rem}
 .nav-links{list-style:none;margin-left:auto;padding:0;display:flex;gap:1rem;align-items:center}
-.btn{display:inline-block;padding:.65rem 1rem;border:1px solid var(--accent);border-radius:.8rem;box-shadow:var(--shadow)}.btn.secondary{border-color:var(--panel-border)}
+/* MODERNIZATION: Refined button styles */
+.btn{
+    display:inline-block;
+    padding:.65rem 1rem;
+    border:1px solid var(--accent);
+    border-radius:.6rem; /* Sharper corners */
+    box-shadow:var(--shadow);
+    font-weight:600; /* Bolder text */
+    transition: all .2s ease;
+}
+.btn.secondary{
+    border-color:var(--muted); /* Better secondary button contrast */
+    color:var(--text);
+    background: transparent;
+}
 .icon-btn{background:transparent;border:1px solid var(--panel-border);border-radius:.6rem;padding:.45rem .6rem;color:var(--text)}
 .bg{position:fixed;inset:0;overflow:hidden;z-index:-1}.blob{position:absolute;filter:blur(60px);opacity:.5;mix-blend-mode:screen}
 .b1{width:38vw;height:38vw;left:-10%;top:-10%;background:radial-gradient(circle at 30% 30%, #22d3ee, transparent 60%);animation:float1 18s infinite alternate ease-in-out}
@@ -21,12 +38,17 @@ h1,h2,h3{line-height:1.2;margin:0 0 .75rem}h1{font-size:clamp(2rem,4vw,3rem)}h2{
 @keyframes float1{to{transform:translate(6%,8%) scale(1.1)}}@keyframes float2{to{transform:translate(-8%,6%) scale(1.08)}}@keyframes float3{to{transform:translate(0%,-10%) scale(1.06)}}
 .hero{padding:6rem 0 2rem;position:relative}.hero-title{background:linear-gradient(90deg,var(--text),#dbeafe);-webkit-background-clip:text;background-clip:text;color:transparent}
 .accent{color:var(--accent)}.accent2{color:var(--accent2)}.accent3{color:var(--accent3)}.cta{margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap}
-.hero-metrics{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.2rem}.kpi{background:var(--panel);border:1px solid var(--panel-border);border-radius:1rem;padding:.9rem 1rem;box-shadow:var(--shadow)}.kpi .num{font-weight:800;font-size:1.4rem;margin-right:.35rem}
-.divider{display:block;width:100%;height:90px}.divider path{fill:rgba(255,255,255,.06)}
+/* REMOVED: .hero-metrics CSS since the block was removed from HTML */
+/* REMOVED: .divider CSS since the SVG was removed from HTML */
 .badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem;padding:0;list-style:none}.badges li{background:var(--panel);border:1px solid var(--panel-border);padding:.4rem .6rem;border-radius:999px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .card{background:var(--panel);border:1px solid var(--panel-border);border-radius:1.1rem;box-shadow:var(--shadow);transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;will-change:transform}
-.card:hover,.card:focus{transform:translateY(-4px);box-shadow:0 14px 40px rgba(0,0,0,.25);border-color:rgba(255,255,255,.18)}
+/* MODERNIZATION: Accent color border on hover */
+.card:hover,.card:focus{
+    transform:translateY(-2px); /* Subtler elevation */
+    box-shadow:0 14px 40px rgba(0,0,0,.25);
+    border-color:var(--accent); /* Accent color border on hover */
+}
 .card-body{padding:1.1rem}.link{display:inline-block;margin-top:.6rem}
 .timeline{list-style:none;margin:0;padding:0;border-left:2px dashed var(--panel-border);padding-left:1rem}.timeline li{position:relative;margin:0 0 1rem 0}
 .timeline .dot{position:absolute;left:-10px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
