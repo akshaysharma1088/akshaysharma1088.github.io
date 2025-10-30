@@ -1,49 +1,32 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Akshay Sharma — Portfolio</title>
-<meta name="description" content="Akshay Sharma • Principal Data Engineer & Data Science Portfolio"/>
-<meta property="og:title" content="Akshay Sharma — Portfolio"/><meta property="og:description" content="Principal Data Engineer • M.S. Data Science • Reliable and ethical data platforms."/>
-<meta name="theme-color" content="#0ea5e9"/><link rel="stylesheet" href="assets/style.css"/><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Akshay Sharma — Projects</title>
+<meta name="description" content="Selected projects by Akshay Sharma"/>
+<link rel="stylesheet" href="assets/style.css"/><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header" id="top"><nav class="container nav">
+<header class="site-header"><nav class="container nav">
   <a class="brand" href="index.html">Akshay Sharma</a>
   <button class="menu-btn" aria-label="Toggle menu" onclick="toggleMenu()"><span class="menu-icon"></span></button>
   <ul id="nav-links" class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="projects.html" aria-current="page">Projects</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
     <li><a class="btn" href="resume.pdf">Résumé</a></li>
     <li><button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
   </ul>
 </nav></header>
 <div class="bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
-<main id="main">
-  <section class="hero container reveal">
-    <p class="eyebrow">Principal Data Engineer · M.S. Data Science</p>
-    <h1 class="hero-title">I build <span class="accent">reliable</span>, <span class="accent2">ethical</span>, and <span class="accent3">scalable</span> data platforms.</h1>
-    <p class="lead">Focused on medallion architecture, domain-driven design for credit-card systems, and applied ML (fraud detection, credit line prediction).</p>
-    <div class="cta">
-      <a class="btn" href="projects.html">See All Projects</a>
-      <a class="btn secondary" href="#contact">Get in touch</a>
-    </div>
-    <div class="hero-metrics">
-      <div class="kpi"><span class="num" data-target="14">0</span>+ yrs <span>Data Engineering</span></div>
-      <div class="kpi"><span class="num" data-target="9">0</span>+ yrs <span>Financial domain</span></div>
-      <div class="kpi"><span class="num" data-target="30">0</span>+ <span>Projects</span></div>
-    </div>
-    <svg class="divider" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z"></path></svg>
-  </section>
-  <section id="about" class="section container reveal">
-    <h2>About</h2>
-    <p>I design and operate data platforms that power financial products. I care about correctness, observability, and pragmatic architecture. Tooling I enjoy: Snowflake, Databricks, Airflow, dbt, and thoughtful dashboards. I also teach, write, and build demos that make complex ideas simple.</p>
-    <ul class="badges"><li>Medallion Architecture</li><li>Domain-Driven Design</li><li>Fraud Detection</li><li>MLOps</li><li>Data Quality</li></ul>
-  </section>
-  <section id="projects" class="section container">
-    <h2 class="reveal">Featured Projects</h2>
-    <div class="grid">
+<main id="main" class="container section">
+  <h1 class="reveal">Projects</h1>
+  <p class="lead">A selection of analytics and engineering work across finance, fraud, healthcare, mobility, and pricing.</p>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search projects…" aria-label="Search projects">
+  </div>
+  <div id="grid" class="grid">
+
         <article class="card tilt reveal" tabindex="0" data-tags="ml, classification, finance">
           <div class="card-body">
             <h3>Proactive Credit Line Prediction</h3>
@@ -96,26 +79,27 @@
             <p class="tags">Regression, Pricing, Real Estate</p>
             <a class="link" href="https://github.com/akshaysharma1088/Airbnb_Pricing_Optimization_Prediction" target="_blank" rel="noopener">Open →</a>
           </div>
-        </article></div>
-    <div style="margin-top:1rem"><a class="btn" href="projects.html">Browse all projects</a></div>
-  </section>
-  <section id="experience" class="section container reveal">
-    <h2>Experience</h2>
-    <ol class="timeline">
-      <li><div class="dot"></div><div class="content"><h3>Principal Data Engineer — Financial Services</h3><p>Led platform modernization: ingestion, quality, lineage, and ML enablement. Mentored teams and set best practices.</p></div></li>
-      <li><div class="dot"></div><div class="content"><h3>Senior Data Engineer — Retail & Growth</h3><p>Shipped reliable batch/streaming pipelines, delivered analytics with measurable business impact.</p></div></li>
-    </ol>
-  </section>
-  <section id="contact" class="section container reveal">
-    <h2>Contact</h2>
-    <p>Say hello — I’m open to collaboration and opportunities.</p>
-    <ul class="contact">
-      <li>🐙 <a href="https://github.com/akshaysharma1088" target="_blank" rel="noopener">github.com/akshaysharma1088</a></li>
-      <li>💼 <a href="https://www.linkedin.com/in/akshay-sharma-1088" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li>✉️ <a href="mailto:akshay.sharma1088@gmail.com">akshay.sharma1088@gmail.com</a></li>
-    </ul>
-  </section>
+        </article>
+
+        <article class="card tilt reveal" tabindex="0" data-tags="time series, finance">
+          <div class="card-body">
+            <h3>Forecasting Stock Movement</h3>
+            <p>Feature engineering and time-series modeling for equity movement forecasting.</p>
+            <p class="tags">Time Series, Finance</p>
+            <a class="link" href="https://github.com/akshaysharma1088/Forecasting_Stock_Movement" target="_blank" rel="noopener">Open →</a>
+          </div>
+        </article>
+  </div>
 </main>
 <footer class="site-footer"><div class="container"><p>© <span id="year"></span> Akshay Sharma. Built with ❤️ and GitHub Pages.</p></div></footer>
 <script src="assets/script.js"></script>
+<script>
+  const input = document.getElementById('search');
+  const cards = [...document.querySelectorAll('#grid .card')];
+  function applyFilter() {
+    const q = (input.value||'').toLowerCase();
+    cards.forEach(c => { c.style.display = !q || c.textContent.toLowerCase().includes(q) ? '' : 'none'; });
+  }
+  input.addEventListener('input', applyFilter);
+</script>
 </body></html>
