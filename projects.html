@@ -10,17 +10,17 @@
   />
 
   <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet"
   />
 
   <!-- Main Styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">Akshay<span>Sharma</span></div>
@@ -33,232 +33,127 @@
     </div>
   </header>
 
+  <!-- PROJECTS -->
   <section class="section projects-page">
     <div class="container">
       <h1>Work / Projects</h1>
+
       <p class="section-intro">
-        A selection of data engineering, analytics, and machine learning
-        projects. Each card includes a short summary and a link to the GitHub
-        repository with code, notebooks, and additional details.
+        A curated selection of my data engineering, machine learning, and analytics work.
+        Click any project to explore the code and notebooks.
       </p>
 
       <input
         type="text"
         id="projectSearch"
         class="project-search"
-        placeholder="Search projects by name, tech, or keywords..."
+        placeholder="Search projects..."
         oninput="filterProjects()"
       />
 
       <div id="projectList" class="project-grid">
-        <!-- 1. Credit Line Prediction -->
+
+        <!-- PROJECT CARDS (same as previously given) -->
+        <!-- 1 -->
         <article class="project-card">
           <h3>Credit Line Prediction / Proactive Limit Increase</h3>
-          <p>
-            Built a machine learning pipeline to predict appropriate credit line
-            increases for cardholders based on demographic, behavioral, and
-            transactional features. Helps identify customers who can safely
-            receive higher limits while managing risk.
-          </p>
-          <p class="tech">
-            <strong>Tech stack:</strong> Python, Pandas, scikit-learn, XGBoost, Matplotlib, Jupyter
-          </p>
-          <a
-            href="https://github.com/akshaysharma1088/Credit_Line_Prediction"
-            target="_blank"
-            class="project-link"
-          >
+          <p>Machine learning model to recommend safe credit limit increases.</p>
+          <p class="tech"><strong>Tech:</strong> Python, XGBoost, scikit-learn</p>
+          <a href="https://github.com/akshaysharma1088/Credit_Line_Prediction" target="_blank">
             View GitHub Repository
           </a>
         </article>
 
-        <!-- 2. Credit Card Fraud Detection -->
+        <!-- 2 -->
         <article class="project-card">
           <h3>Credit Card Fraud Detection</h3>
-          <p>
-            Developed models to detect fraudulent credit card transactions in
-            highly imbalanced datasets. Compares algorithms, applies SMOTE, and
-            uses precision–recall metrics to reduce false positives while
-            catching fraud.
-          </p>
-          <p class="tech">
-            <strong>Tech stack:</strong> Python, Pandas, scikit-learn, SMOTE, XGBoost/Random Forest, Jupyter
-          </p>
-          <a
-            href="https://github.com/akshaysharma1088/Credit-Card-Fraud-Detection"
-            target="_blank"
-            class="project-link"
-          >
+          <p>Fraud prediction using ML, SMOTE, and imbalance handling.</p>
+          <p class="tech"><strong>Tech:</strong> Python, SMOTE, scikit-learn</p>
+          <a href="https://github.com/akshaysharma1088/Credit-Card-Fraud-Detection" target="_blank">
             View GitHub Repository
           </a>
         </article>
 
-        <!-- 3. Prescription Fraud & Drug Diversion -->
+        <!-- 3 -->
         <article class="project-card">
-          <h3>Detecting Prescription Fraud &amp; Drug Diversion</h3>
-          <p>
-            Analytics and ML project to identify suspicious prescribing and
-            dispensing patterns indicating prescription fraud or drug
-            diversion. Includes EDA, feature engineering around prescriber and
-            pharmacy behavior, and risk scoring.
-          </p>
-          <p class="tech">
-            <strong>Tech stack:</strong> Python, Pandas, scikit-learn, Geospatial analysis, Visualization libraries
-          </p>
-          <a
-            href="https://github.com/akshaysharma1088/Detecting_Prescription_Fraud_and_Drug_Diversion_Using_Analytics"
-            target="_blank"
-            class="project-link"
-          >
+          <h3>Prescription Fraud & Drug Diversion Detection</h3>
+          <p>Analytics + ML to detect suspicious pharmacies and prescribers.</p>
+          <p class="tech"><strong>Tech:</strong> Python, EDA, ML</p>
+          <a href="https://github.com/akshaysharma1088/Detecting_Prescription_Fraud_and_Drug_Diversion_Using_Analytics" target="_blank">
             View GitHub Repository
           </a>
         </article>
 
-        <!-- 4. Kia & Hyundai Theft Analysis -->
+        <!-- 4 -->
         <article class="project-card">
-          <h3>Kia &amp; Hyundai Theft Analysis (Retrospective)</h3>
-          <p>
-            Explores the surge in Kia and Hyundai vehicle thefts using multiple
-            datasets, focusing on time trends, geographic hotspots, and vehicle
-            attributes. Tells the story of when, where, and which models were
-            most impacted.
-          </p>
-          <p class="tech">
-            <strong>Tech stack:</strong> R/Python, Pandas or tidyverse, ggplot2/Matplotlib, mapping libraries
-          </p>
-          <a
-            href="https://github.com/akshaysharma1088/Kia_Hyundai_Theft_Retro"
-            target="_blank"
-            class="project-link"
-          >
+          <h3>Kia & Hyundai Theft Analysis</h3>
+          <p>Trend and hotspot analysis of vehicle theft data.</p>
+          <p class="tech"><strong>Tech:</strong> Python/R, visualization</p>
+          <a href="https://github.com/akshaysharma1088/Kia_Hyundai_Theft_Retro" target="_blank">
             View GitHub Repository
           </a>
         </article>
 
-        <!-- 5. National Database of Child Care -->
+        <!-- 5 -->
         <article class="project-card">
-          <h3>National Database of Child Care Analysis</h3>
-          <p>
-            Analyzes the National Database of Childcare Prices to understand
-            cost patterns across states, age groups, and provider types.
-            Includes data cleaning, feature engineering, and visualizations to
-            support policy and family decision-making.
-          </p>
-          <p class="tech">
-            <strong>Tech stack:</strong> Python, Pandas, Plotly/Matplotlib, Jupyter
-          </p>
-          <a
-            href="https://github.com/akshaysharma1088/National_DB_of_Child_Care"
-            target="_blank"
-            class="project-link"
-          >
+          <h3>National Child Care Database Analysis</h3>
+          <p>Cost trends, state differences, and insights using dashboards.</p>
+          <p class="tech"><strong>Tech:</strong> Python, Plotly</p>
+          <a href="https://github.com/akshaysharma1088/National_DB_of_Child_Care" target="_blank">
             View GitHub Repository
           </a>
         </article>
 
-        <!-- 6. Airbnb Pricing Optimization -->
+        <!-- 6 -->
         <article class="project-card">
-          <h3>Airbnb Pricing Optimization &amp; Prediction</h3>
-          <p>
-            Builds regression and ML models to predict Airbnb listing prices
-            from location, amenities, reviews, and host characteristics.
-            Evaluates algorithms and explains how hosts can use model insights
-            to set competitive prices.
-          </p>
-          <p class="tech">
-            <strong>Tech stack:</strong> Python, Pandas, scikit-learn, XGBoost, Visualization libraries, Jupyter
-          </p>
-          <a
-            href="https://github.com/akshaysharma1088/Airbnb_Pricing_Optimization_Prediction"
-            target="_blank"
-            class="project-link"
-          >
+          <h3>Airbnb Pricing Optimization</h3>
+          <p>ML models to predict optimal Airbnb listing prices.</p>
+          <p class="tech"><strong>Tech:</strong> Python, XGBoost</p>
+          <a href="https://github.com/akshaysharma1088/Airbnb_Pricing_Optimization_Prediction" target="_blank">
             View GitHub Repository
           </a>
         </article>
 
-        <!-- 7. Forecasting Stock Movement -->
+        <!-- 7 -->
         <article class="project-card">
-          <h3>Forecasting Stock Movement</h3>
-          <p>
-            Investigates whether short-term stock price direction can be
-            forecast using technical indicators and ML models. Includes feature
-            engineering from OHLCV data, model comparison, and a discussion of
-            limitations and risk.
-          </p>
-          <p class="tech">
-            <strong>Tech stack:</strong> Python, Pandas, scikit-learn, technical indicators, Jupyter
-          </p>
-          <a
-            href="https://github.com/akshaysharma1088/Forecasting_Stock_Movement"
-            target="_blank"
-            class="project-link"
-          >
+          <h3>Stock Movement Forecasting</h3>
+          <p>Predictive analysis using technical indicators.</p>
+          <p class="tech"><strong>Tech:</strong> Python, scikit-learn</p>
+          <a href="https://github.com/akshaysharma1088/Forecasting_Stock_Movement" target="_blank">
             View GitHub Repository
           </a>
         </article>
 
-        <!-- 8. Fraud Transactions Analysis in R -->
+        <!-- 8 -->
         <article class="project-card">
-          <h3>Fraud Transactions Analysis in R</h3>
-          <p>
-            Uses R to explore and model fraudulent transaction data, covering
-            the workflow from EDA to modeling and evaluation. Demonstrates
-            comfort working in R as well as Python.
-          </p>
-          <p class="tech">
-            <strong>Tech stack:</strong> R, tidyverse, caret (or similar ML packages), ggplot2, R Markdown
-          </p>
-          <a
-            href="https://github.com/akshaysharma1088/Fraud_Transactions_Analysis_R"
-            target="_blank"
-            class="project-link"
-          >
+          <h3>Fraud Transactions Analysis (R)</h3>
+          <p>End-to-end fraud analytics using R.</p>
+          <p class="tech"><strong>Tech:</strong> R, tidyverse</p>
+          <a href="https://github.com/akshaysharma1088/Fraud_Transactions_Analysis_R" target="_blank">
             View GitHub Repository
           </a>
         </article>
 
-        <!-- 9. Movies Database Analysis -->
+        <!-- 9 -->
         <article class="project-card">
           <h3>Movies Database Analysis</h3>
-          <p>
-            Exploratory analysis of a movie dataset to identify trends in
-            genres, ratings, budgets, and box office performance. Answers
-            questions like what drives high ratings and how genres have evolved
-            over time.
-          </p>
-          <p class="tech">
-            <strong>Tech stack:</strong> Python, Pandas, Matplotlib/Seaborn, Jupyter
-          </p>
-          <a
-            href="https://github.com/akshaysharma1088/Movies_DB_Analysis"
-            target="_blank"
-            class="project-link"
-          >
+          <p>Trends in genre, budget, and ratings through EDA.</p>
+          <p class="tech"><strong>Tech:</strong> Python</p>
+          <a href="https://github.com/akshaysharma1088/Movies_DB_Analysis" target="_blank">
             View GitHub Repository
           </a>
         </article>
 
-        <!-- 10. Portfolio Website -->
+        <!-- 10 -->
         <article class="project-card">
-          <h3>Data Science Portfolio Website</h3>
-          <p>
-            Responsive portfolio site built with HTML, CSS, and JavaScript to
-            showcase my data engineering and data science work. Includes an
-            About section, searchable Projects page, and Contact section with
-            links back to GitHub and LinkedIn.
-          </p>
-          <p class="tech">
-            <strong>Tech stack:</strong> HTML, CSS, JavaScript, GitHub Pages
-          </p>
-          <a
-            href="https://github.com/akshaysharma1088/akshaysharma1088.github.io"
-            target="_blank"
-            class="project-link"
-          >
+          <h3>Portfolio Website</h3>
+          <p>Website built using HTML, CSS, JS + GitHub Pages.</p>
+          <p class="tech"><strong>Tech:</strong> HTML, CSS, JS</p>
+          <a href="https://github.com/akshaysharma1088/akshaysharma1088.github.io" target="_blank">
             View GitHub Repository
           </a>
         </article>
+
       </div>
 
       <div class="back-link">
@@ -267,9 +162,10 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Akshay Sharma · Data Engineering &amp; Data Science</p>
+      <p>© <span id="year"></span> Akshay Sharma</p>
       <a href="index.html#contact">Get in touch →</a>
     </div>
   </footer>
@@ -278,12 +174,10 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     function filterProjects() {
-      const query = document
-        .getElementById("projectSearch")
-        .value.toLowerCase();
+      const query = document.getElementById("projectSearch").value.toLowerCase();
       const cards = document.querySelectorAll("#projectList .project-card");
 
-      cards.forEach((card) => {
+      cards.forEach(card => {
         const text = card.innerText.toLowerCase();
         card.style.display = text.includes(query) ? "block" : "none";
       });
