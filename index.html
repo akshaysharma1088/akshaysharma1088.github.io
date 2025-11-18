@@ -18,7 +18,7 @@
   />
 
   <!-- Main Styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- HEADER / NAV -->
@@ -34,32 +34,32 @@
     </div>
   </header>
 
-  <!-- HERO / HOME -->
+  <!-- HERO -->
   <section id="home" class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
         <p class="hero-kicker">Principal Data Engineer · M.S. Data Science</p>
         <h1>
-          I build data platforms &amp; machine learning solutions that solve
-          real business problems.
+          I build data platforms & machine learning solutions that solve
+          business problems.
         </h1>
         <p class="hero-subtitle">
-          14+ years of experience across financial services &amp; retail,
-          specializing in data engineering, analytics, and applied machine
-          learning.
+          14+ years of experience across financial services & retail,
+          specializing in data engineering, analytics, and applied machine learning.
         </p>
         <div class="hero-actions">
           <a href="projects.html" class="btn btn-primary">View Projects</a>
-          <a href="#about" class="btn btn-outline">Learn more about me</a>
+          <a href="#about" class="btn btn-outline">Learn more</a>
         </div>
       </div>
+
       <div class="hero-badge">
         <div class="badge-card">
           <p class="badge-title">Current Focus</p>
           <ul>
-            <li>Credit risk &amp; fraud analytics</li>
+            <li>Credit risk & fraud analytics</li>
             <li>Modern data platforms (Snowflake, cloud)</li>
-            <li>End-to-end data science pipelines</li>
+            <li>End-to-end ML pipelines</li>
           </ul>
         </div>
       </div>
@@ -70,27 +70,19 @@
   <section id="about" class="section">
     <div class="container">
       <h2>About Me</h2>
+
       <p>
         I’m <strong>Akshay Sharma</strong>, a Principal Data Engineer at
-        Discover Financial Services and a recent
-        <strong>M.S. in Data Science</strong> graduate from Bellevue University.
-        Over the last 14+ years, I’ve designed and built data platforms and
-        pipelines across financial services and retail, working with
-        technologies like Snowflake, Python, SQL, and Ab Initio.
+        Discover Financial Services and a recent <strong>M.S. in Data Science</strong>
+        graduate from Bellevue University. Over the last 14+ years, I’ve built
+        scalable data platforms, pipelines, and analytics solutions across
+        financial services.
       </p>
+
       <p>
-        My recent projects focus on applying machine learning and analytics to
-        real business problems—credit line prediction, credit card fraud
-        detection, childcare cost analysis, vehicle theft trends, and stock
-        movement forecasting. I enjoy taking messy, real-world data, turning it
-        into clean datasets, and building models and dashboards that drive
-        decisions.
-      </p>
-      <p>
-        This portfolio highlights a selection of my work across data
-        engineering, analytics, and machine learning. Each project includes a
-        brief summary and a link to the GitHub repository where you can explore
-        the code, notebooks, and documentation.
+        My work spans machine learning, risk modeling, fraud analytics, data engineering,
+        data warehousing, cloud migration, and business intelligence. I enjoy transforming
+        messy real-world data into high-impact models and dashboards.
       </p>
 
       <div class="skills-grid">
@@ -98,24 +90,26 @@
           <h3>Core Skills</h3>
           <ul>
             <li>Python, R, SQL, Snowflake, Ab Initio</li>
-            <li>ETL/ELT, Data Warehousing, Medallion Architecture</li>
-            <li>Distributed data processing &amp; orchestration</li>
+            <li>ETL/ELT, Data Warehousing</li>
+            <li>Cloud Data Platforms</li>
           </ul>
         </div>
+
         <div class="skill-card">
-          <h3>Data Science</h3>
+          <h3>Machine Learning</h3>
           <ul>
-            <li>Supervised &amp; unsupervised ML</li>
-            <li>Feature engineering &amp; model evaluation</li>
-            <li>Time series &amp; anomaly detection</li>
+            <li>Supervised & Unsupervised ML</li>
+            <li>Feature Engineering</li>
+            <li>Time Series & Forecasting</li>
           </ul>
         </div>
+
         <div class="skill-card">
-          <h3>Tools &amp; Libraries</h3>
+          <h3>Visualization Tools</h3>
           <ul>
-            <li>Pandas, NumPy, scikit-learn, XGBoost</li>
-            <li>Matplotlib, Seaborn, Plotly, ggplot2</li>
-            <li>Git, Jupyter, RStudio</li>
+            <li>Matplotlib, Seaborn, Plotly</li>
+            <li>Power BI, Tableau</li>
+            <li>ggplot2, Shiny</li>
           </ul>
         </div>
       </div>
@@ -127,12 +121,11 @@
     <div class="container">
       <h2>Contact</h2>
       <p class="section-intro">
-        I’m open to opportunities in data science, data engineering, and
-        analytics, as well as collaborations on interesting data projects.
+        Feel free to reach out for opportunities, collaboration, or questions.
       </p>
 
       <div class="contact-layout">
-        <!-- LEFT: CONTACT INFO -->
+        <!-- LEFT BLOCK -->
         <div>
           <ul class="contact-list">
             <li>
@@ -141,12 +134,14 @@
                 akshaysharma1088@gmail.com
               </a>
             </li>
+
             <li>
               <span>💻</span>
               <a href="https://github.com/akshaysharma1088" target="_blank">
                 github.com/akshaysharma1088
               </a>
             </li>
+
             <li>
               <span>🔗</span>
               <a
@@ -156,6 +151,7 @@
                 linkedin.com/in/akshaysharma1088
               </a>
             </li>
+
             <li>
               <span>📍</span>
               Chicago, IL, USA
@@ -163,35 +159,20 @@
           </ul>
         </div>
 
-        <!-- RIGHT: FORM (DISPLAY ONLY) -->
+        <!-- RIGHT FORM -->
         <form class="contact-form">
-          <!-- Visual-only form, no backend -->
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Your name" />
+          <label>Name</label>
+          <input type="text" placeholder="Your name" />
 
-          <label for="email">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Your email"
-          />
+          <label>Email</label>
+          <input type="email" placeholder="Your email" />
 
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            placeholder="Your message"
-          ></textarea>
+          <label>Message</label>
+          <textarea rows="4" placeholder="Your message"></textarea>
 
-          <button type="button" class="btn btn-primary disabled">
-            Send (demo only)
-          </button>
-          <p class="form-note">
-            This is a demo contact form. Please use email or LinkedIn to reach
-            out.
-          </p>
+          <button class="btn btn-primary disabled">Send (demo only)</button>
+
+          <p class="form-note">Use email or LinkedIn to reach me.</p>
         </form>
       </div>
     </div>
@@ -200,16 +181,12 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>
-        © <span id="year"></span> Akshay Sharma · Data Engineering &amp; Data
-        Science
-      </p>
+      <p>© <span id="year"></span> Akshay Sharma — Data Engineering & Data Science</p>
       <a href="projects.html">View my work →</a>
     </div>
   </footer>
 
   <script>
-    // Set current year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
