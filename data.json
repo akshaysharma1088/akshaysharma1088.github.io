@@ -1,0 +1,145 @@
+{
+  "_how_to_edit": "Edit this file to update the site. Each list renders in the order written. Status for research: Published, Preprint or Under review.",
+  "runlog": [
+    {
+      "date": "Oct 2026",
+      "text": "Released the PipeMend benchmark with a Zenodo DOI"
+    },
+    {
+      "date": "Oct 2026",
+      "text": "Published the first newsletter issue, on why data quality checks approve wrong AI fixes"
+    },
+    {
+      "date": "Oct 2026",
+      "text": "Released the LEGATO preprint and the ETL-TransBench benchmark"
+    },
+    {
+      "date": "Jul 2026",
+      "text": "Joined Salesforce as Lead Member of Technical Staff"
+    },
+    {
+      "date": "May 2026",
+      "text": "Published in IET Software"
+    }
+  ],
+  "research": [
+    {
+      "title": "Domain-Driven Data and AI Platforms: Governing Analytics and Machine Learning Pipelines at Scale",
+      "url": "https://doi.org/10.1049/sfw2/4364820",
+      "status": "Published",
+      "venue": "IET Software",
+      "year": "2026",
+      "summary": "A domain-driven reference architecture for governing analytics and ML pipelines in large enterprises."
+    },
+    {
+      "title": "LEGATO: Agentic LLM Translation of Legacy ETL Workflows to Modern Dataflow Code with Test-Based Semantic Verification",
+      "url": "https://doi.org/10.13140/RG.2.2.35761.34403",
+      "status": "Preprint",
+      "venue": "",
+      "year": "2026",
+      "summary": "An agent that translates legacy ETL into Spark and checks every translation against executable data tests."
+    },
+    {
+      "title": "Fix or Page? Silent Harm and Safe Escalation When LLM Agents Remediate Data Pipeline Incidents",
+      "url": "",
+      "status": "Under review",
+      "venue": "",
+      "year": "2026",
+      "summary": "64 pipeline incidents, three model sizes: data quality checks approved every harmful fix; the agents' own confidence caught most of them."
+    },
+    {
+      "title": "Event-driven medallion architecture for credit risk feature engineering",
+      "url": "",
+      "status": "Under review",
+      "venue": "",
+      "year": "2026",
+      "summary": "Event-driven medallion pipelines for credit risk feature engineering, with open-source code."
+    },
+    {
+      "title": "A domain-driven architecture for scalable and regulated lakehouse systems on Snowflake",
+      "url": "",
+      "status": "Under review",
+      "venue": "",
+      "year": "2026",
+      "summary": "Governance that propagates across domains, measured with a reproducible Snowflake benchmark."
+    }
+  ],
+  "benchmarks": [
+    {
+      "name": "ETL-TransBench",
+      "repo": "akshaysharma1088/etl-transbench",
+      "summary": "32 legacy ETL translation tasks with executable oracles."
+    },
+    {
+      "name": "PipeMend",
+      "repo": "akshaysharma1088/pipemend",
+      "summary": "64 pipeline incidents graded on whether the data is right afterwards.",
+      "doi": "10.5281/zenodo.23510784"
+    },
+    {
+      "name": "Lakehouse governance bench",
+      "repo": "akshaysharma1088/lakehouse-governance-bench",
+      "summary": "Reproducible governance checks for Snowflake lakehouses."
+    },
+    {
+      "name": "EDMD framework",
+      "repo": "akshaysharma1088/EDMDFramework",
+      "summary": "Event-driven medallion pipelines for credit risk features."
+    }
+  ],
+  "experience": [
+    {
+      "when": "2026 to now",
+      "org": "Salesforce",
+      "role": "Lead Member of Technical Staff",
+      "note": "Customer Data Graphs"
+    },
+    {
+      "when": "2025 to 2026",
+      "org": "Capital One",
+      "role": "Principal Data Engineer",
+      "note": ""
+    },
+    {
+      "when": "Until 2025",
+      "org": "Discover Financial Services",
+      "role": "Principal Data Engineer",
+      "note": "Credit risk and fraud data platforms"
+    },
+    {
+      "when": "Earlier",
+      "org": "Tata Consultancy Services and Wipro",
+      "role": "",
+      "note": "Data engineering across financial services, retail and healthcare"
+    }
+  ],
+  "skills": [
+    "PySpark",
+    "AWS EMR · Glue · Kinesis",
+    "Airflow",
+    "Kafka",
+    "Snowflake",
+    "Databricks · Delta Lake",
+    "Neo4j",
+    "Ab Initio modernization",
+    "LLM agents"
+  ],
+  "reviewing": [
+    "Peer reviewer, IEEE Access and IEEE IT Professional",
+    "Hackathon judge, including RevolutionUC, LA Hacks and FinBilim",
+    "Mentor, USC AI Hackathon"
+  ],
+  "memberships": [
+    "IEEE Senior Member",
+    "Member, Institution of Engineering and Technology (IET)",
+    "UK Registered Design No. 6512069, AI-based device for cloud data security (2026, co-registered)"
+  ],
+  "talks": [
+    "The Economist",
+    "Dreamforce",
+    "Snowflake workshop",
+    "USAII mentor workshop",
+    "Discover technical leader workshop",
+    "Keynote, hackathon in Cincinnati"
+  ]
+}
