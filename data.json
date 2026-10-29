@@ -202,7 +202,10 @@
     "LLM agents"
   ],
   "reviewing": [
-    "Technical Program Committee, TAIMMA 2027 (Springer CCIS)",
+    {
+      "text": "Technical Program Committee, TAIMMA 2027 (Springer CCIS)",
+      "url": "https://www.taimma-conf.org/"
+    },
     "Peer reviewer, IEEE Access and IEEE IT Professional (15 reviews)",
     "Hackathon judge, including RevolutionUC, LA Hacks and FinBilim",
     "Mentor, USC AI Hackathon"
@@ -213,7 +216,10 @@
     "UK Registered Design No. 6512069, AI-based device for cloud data security (2026, co-registered)"
   ],
   "talks": [
-    "Invited keynote, TAIMMA 2027 (March 2027, online)",
+    {
+      "text": "Invited keynote, TAIMMA 2027: \"When AI Agents Touch Production Data: Lessons from Building and Verifying LLM-Driven Data Systems\" (March 2027, online)",
+      "url": "https://www.taimma-conf.org/"
+    },
     "The Economist",
     "Dreamforce",
     "Snowflake workshop",

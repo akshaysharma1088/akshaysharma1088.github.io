@@ -354,6 +354,27 @@
    "author": {
     "@id": "https://akshaysharma1088.github.io/#person"
    }
+  },
+  {
+   "@type": "Event",
+   "name": "TAIMMA 2027 keynote: When AI Agents Touch Production Data",
+   "description": "Invited keynote: Lessons from Building and Verifying LLM-Driven Data Systems",
+   "startDate": "2027-03-27",
+   "endDate": "2027-03-28",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://www.taimma-conf.org/"
+   },
+   "url": "https://www.taimma-conf.org/",
+   "performer": {
+    "@id": "https://akshaysharma1088.github.io/#person"
+   },
+   "organizer": {
+    "@type": "Organization",
+    "name": "TAIMMA 2027",
+    "url": "https://www.taimma-conf.org/"
+   }
   }
  ]
 }
@@ -698,7 +719,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
           <div>
             <p class="sub-h" style="margin-top:0;">Reviewing and judging</p>
             <ul class="plain" id="reviewing">
-              <li>Technical Program Committee, TAIMMA 2027 (Springer CCIS)</li>
+              <li><a href="https://www.taimma-conf.org/">Technical Program Committee, TAIMMA 2027 (Springer CCIS)</a></li>
               <li>Peer reviewer, IEEE Access and IEEE IT Professional (15 reviews)</li>
               <li>Hackathon judge, including RevolutionUC, LA Hacks and FinBilim</li>
               <li>Mentor, USC AI Hackathon</li>
@@ -713,7 +734,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
           <div>
             <p class="sub-h" style="margin-top:0;">Talks and workshops</p>
             <ul class="plain" id="talks">
-              <li>Invited keynote, TAIMMA 2027 (March 2027, online)</li>
+              <li><a href="https://www.taimma-conf.org/">Invited keynote, TAIMMA 2027: &quot;When AI Agents Touch Production Data: Lessons from Building and Verifying LLM-Driven Data Systems&quot; (March 2027, online)</a></li>
               <li>The Economist</li>
               <li>Dreamforce</li>
               <li>Snowflake workshop</li>
@@ -827,7 +848,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       li.appendChild(div); return li;
     }));
     if (d.skills) fill('skills', d.skills.map(function (s) { return el('span', 'tag', s); }));
-    ['reviewing', 'memberships', 'talks'].forEach(function (k) { if (d[k]) fill(k, d[k].map(function (t) { return el('li', null, t); })); });
+    ['reviewing', 'memberships', 'talks'].forEach(function (k) { if (d[k]) fill(k, d[k].map(function (t) { var li = el('li'); if (typeof t === 'string') li.textContent = t; else li.appendChild(link(t.url, t.text)); return li; })); });
   }
 
   // Live GitHub stats for each benchmark card (public API, no key needed).
