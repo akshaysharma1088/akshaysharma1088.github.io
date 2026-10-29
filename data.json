@@ -1,13 +1,13 @@
 {
-  "_how_to_edit": "Edit this file to update the site. Each list renders in the order written. Status for research: Published, Preprint or Under review.",
+  "_how_to_edit": "Edit this file to update the site. Each list renders in the order written. Status for research: Published, Preprint or Under review. Keep index.html's static copy in step so search engines see the same content.",
   "runlog": [
     {
       "date": "Oct 2026",
-      "text": "Released the PipeMend benchmark with a Zenodo DOI"
+      "text": "Invited keynote at TAIMMA 2027 and joined its Technical Program Committee"
     },
     {
       "date": "Oct 2026",
-      "text": "Published the first newsletter issue, on why data quality checks approve wrong AI fixes"
+      "text": "Released the PipeMend benchmark and the pipeverify GitHub Action"
     },
     {
       "date": "Oct 2026",
@@ -26,55 +26,120 @@
     {
       "title": "Domain-Driven Data and AI Platforms: Governing Analytics and Machine Learning Pipelines at Scale",
       "url": "https://doi.org/10.1049/sfw2/4364820",
+      "doi": "10.1049/sfw2/4364820",
       "status": "Published",
       "venue": "IET Software",
       "year": "2026",
       "summary": "A domain-driven reference architecture for governing analytics and ML pipelines in large enterprises."
     },
     {
-      "title": "LEGATO: Agentic LLM Translation of Legacy ETL Workflows to Modern Dataflow Code with Test-Based Semantic Verification",
+      "title": "LEGATO: Agentic Large Language Model Translation of Legacy ETL Workflows to Modern Dataflow Code with Test-Based Semantic Verification",
       "url": "https://doi.org/10.13140/RG.2.2.35761.34403",
+      "doi": "10.13140/RG.2.2.35761.34403",
       "status": "Preprint",
-      "venue": "",
       "year": "2026",
       "summary": "An agent that translates legacy ETL into Spark and checks every translation against executable data tests."
     },
     {
       "title": "Fix or Page? Silent Harm and Safe Escalation When LLM Agents Remediate Data Pipeline Incidents",
-      "url": "",
-      "status": "Under review",
-      "venue": "",
+      "url": "https://doi.org/10.2139/ssrn.7641619",
+      "doi": "10.2139/ssrn.7641619",
+      "status": "Preprint",
       "year": "2026",
-      "summary": "64 pipeline incidents, three model sizes: data quality checks approved every harmful fix; the agents' own confidence caught most of them."
+      "summary": "64 broken pipelines, three model sizes: data quality monitors approved every harmful fix, while the agents' own confidence was the useful safety signal."
     },
     {
-      "title": "Event-driven medallion architecture for credit risk feature engineering",
-      "url": "",
-      "status": "Under review",
-      "venue": "",
+      "title": "When the Rules Collide: Explainability, Fairness, and Model Risk Governance in Credit Machine Learning",
+      "url": "https://doi.org/10.2139/ssrn.7653558",
+      "doi": "10.2139/ssrn.7653558",
+      "status": "Preprint",
       "year": "2026",
-      "summary": "Event-driven medallion pipelines for credit risk feature engineering, with open-source code."
+      "summary": "A review of how fair lending law, model risk guidance and capital rules constrain one another in credit ML."
     },
     {
-      "title": "A domain-driven architecture for scalable and regulated lakehouse systems on Snowflake",
-      "url": "",
-      "status": "Under review",
-      "venue": "",
+      "title": "An Event-Driven Medallion Architecture with Domain-Driven Design for Training-Serving Consistent Credit Risk Feature Engineering",
+      "url": "https://doi.org/10.2139/ssrn.7653523",
+      "doi": "10.2139/ssrn.7653523",
+      "status": "Preprint",
+      "year": "2026",
+      "summary": "Event-driven medallion pipelines that keep credit risk features consistent between training and serving."
+    },
+    {
+      "title": "Agent-Oriented Reference Architecture for Domain-Driven Enterprise Data Platforms",
+      "url": "https://doi.org/10.2139/ssrn.7653520",
+      "doi": "10.2139/ssrn.7653520",
+      "status": "Preprint",
+      "year": "2026",
+      "summary": "A reference architecture for running AI agents over domain-owned enterprise data."
+    },
+    {
+      "title": "Domain-Driven Governance for Regulated Lakehouses: A Contract-Based Architecture and Reproducible Evaluation on Snowflake",
+      "url": "https://www.researchgate.net/publication/416348559",
+      "status": "Preprint",
       "year": "2026",
       "summary": "Governance that propagates across domains, measured with a reproducible Snowflake benchmark."
+    },
+    {
+      "title": "Proactive Credit Line Increase Using Risk-Constrained Explainable Machine Learning",
+      "url": "https://www.researchgate.net/publication/404468422",
+      "authors": "A. Sharma, G. Sharma",
+      "status": "Preprint",
+      "year": "2026",
+      "summary": "Credit line decisions as constrained profit maximization, with calibrated models, SHAP explanations and fairness limits."
+    },
+    {
+      "title": "FraudRAG: Knowledge Graph-Augmented Retrieval for Real-Time Financial Statement Fraud Detection Using a Domain-Driven Medallion Architecture",
+      "url": "https://doi.org/10.2139/ssrn.6714178",
+      "doi": "10.2139/ssrn.6714178",
+      "status": "Preprint",
+      "year": "2026",
+      "summary": "A Graph-RAG pipeline combining a Neo4j knowledge graph and vector retrieval to check financial statements."
+    },
+    {
+      "title": "A Domain-Driven Reference Architecture for Scalable and Governed Data Systems in Regulated Enterprises",
+      "url": "https://doi.org/10.2139/ssrn.6297121",
+      "doi": "10.2139/ssrn.6297121",
+      "status": "Preprint",
+      "year": "2026",
+      "summary": "The reference architecture behind domain-owned, governed data platforms in banking."
+    },
+    {
+      "title": "Risk-Aware FinOps Optimization Using Machine Learning in Regulated Multi-Cloud Environments",
+      "url": "",
+      "authors": "G. Sharma, A. Sharma, S. A. Syed",
+      "status": "Under review",
+      "venue": "IIPEM 2026",
+      "year": "2026",
+      "summary": "Calibrated cost forecasts and tail-risk optimization for cloud spend under data residency rules."
+    },
+    {
+      "title": "Risk-Aware Self-Healing Cloud Infrastructure Using Agentic AI and Policy-Based Remediation for Regulated Financial Systems",
+      "url": "",
+      "authors": "G. Sharma, A. Sharma, D. Singh",
+      "status": "Under review",
+      "venue": "ISASF 2026",
+      "year": "2026",
+      "summary": "Agents propose repairs; a deterministic policy gate decides what may run."
     }
   ],
   "benchmarks": [
     {
       "name": "ETL-TransBench",
       "repo": "akshaysharma1088/etl-transbench",
-      "summary": "32 legacy ETL translation tasks with executable oracles."
+      "summary": "32 legacy ETL translation tasks with executable oracles.",
+      "doi": "10.5281/zenodo.23307741"
     },
     {
       "name": "PipeMend",
       "repo": "akshaysharma1088/pipemend",
-      "summary": "64 pipeline incidents graded on whether the data is right afterwards.",
+      "summary": "64 broken pipelines graded on whether the data is right afterwards.",
       "doi": "10.5281/zenodo.23510784"
+    },
+    {
+      "name": "pipeverify",
+      "repo": "akshaysharma1088/pipeverify",
+      "summary": "GitHub Action that checks pipeline changes against real data before they ship.",
+      "doi": "10.5281/zenodo.23542277"
     },
     {
       "name": "Lakehouse governance bench",
@@ -83,8 +148,20 @@
     },
     {
       "name": "EDMD framework",
-      "repo": "akshaysharma1088/EDMDFramework",
-      "summary": "Event-driven medallion pipelines for credit risk features."
+      "repo": "akshaysharma1088/EDMD-Framework",
+      "summary": "Event-driven medallion pipelines for credit risk features.",
+      "doi": "10.5281/zenodo.23548441"
+    },
+    {
+      "name": "Credit line determination",
+      "repo": "akshaysharma1088/Credit_Line_Determination",
+      "summary": "Risk-constrained, explainable credit line increase models.",
+      "doi": "10.5281/zenodo.23710023"
+    },
+    {
+      "name": "FraudRAG",
+      "repo": "akshaysharma1088/fraudrag",
+      "summary": "Research prototype for evidence-grounded financial document checks."
     }
   ],
   "experience": [
@@ -98,7 +175,7 @@
       "when": "2025 to 2026",
       "org": "Capital One",
       "role": "Principal Data Engineer",
-      "note": ""
+      "note": "Domain-driven medallion data architecture"
     },
     {
       "when": "Until 2025",
@@ -125,7 +202,8 @@
     "LLM agents"
   ],
   "reviewing": [
-    "Peer reviewer, IEEE Access and IEEE IT Professional",
+    "Technical Program Committee, TAIMMA 2027 (Springer CCIS)",
+    "Peer reviewer, IEEE Access and IEEE IT Professional (15 reviews)",
     "Hackathon judge, including RevolutionUC, LA Hacks and FinBilim",
     "Mentor, USC AI Hackathon"
   ],
@@ -135,6 +213,7 @@
     "UK Registered Design No. 6512069, AI-based device for cloud data security (2026, co-registered)"
   ],
   "talks": [
+    "Invited keynote, TAIMMA 2027 (March 2027, online)",
     "The Economist",
     "Dreamforce",
     "Snowflake workshop",
