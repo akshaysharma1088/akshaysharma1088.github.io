@@ -2,6 +2,10 @@
   "_how_to_edit": "Edit this file to update the site. Each list renders in the order written. Status for research: Published, Preprint or Under review. Keep index.html's static copy in step so search engines see the same content.",
   "runlog": [
     {
+      "date": "Nov 2026",
+      "text": "Published on HackerNoon: Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines"
+    },
+    {
       "date": "Oct 2026",
       "text": "Invited keynote at TAIMMA 2027 and joined its Technical Program Committee"
     },
@@ -162,6 +166,15 @@
       "name": "FraudRAG",
       "repo": "akshaysharma1088/fraudrag",
       "summary": "Research prototype for evidence-grounded financial document checks."
+    }
+  ],
+  "articles": [
+    {
+      "title": "Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines",
+      "url": "https://hackernoon.com/benchmarking-claude-haiku-sonnet-and-opus-on-64-broken-data-pipelines",
+      "outlet": "HackerNoon",
+      "date": "Nov 2026",
+      "summary": "Which model tier is worth paying for when AI agents repair data pipelines, and why every tier still needs verification."
     }
   ],
   "experience": [

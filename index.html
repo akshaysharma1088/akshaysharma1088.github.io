@@ -12,6 +12,8 @@
 <link rel="me" href="https://github.com/akshaysharma1088">
 <link rel="me" href="https://www.linkedin.com/in/akshay-sharma-1088">
 <link rel="me" href="https://sessionize.com/akshaysharma10/">
+<link rel="me" href="https://dzone.com/users/5620337/akshaysharma1088.html">
+<link rel="me" href="https://hackernoon.com/about/akshaysharma10">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://akshaysharma1088.github.io/">
 <meta property="og:title" content="Akshay Sharma | Data Engineering and Applied AI Research">
@@ -104,7 +106,9 @@
     "https://www.linkedin.com/in/akshay-sharma-1088",
     "https://github.com/akshaysharma1088",
     "https://akshaysharma10.substack.com",
-    "https://sessionize.com/akshaysharma10/"
+    "https://sessionize.com/akshaysharma10/",
+    "https://dzone.com/users/5620337/akshaysharma1088.html",
+    "https://hackernoon.com/about/akshaysharma10"
    ]
   },
   {
@@ -574,6 +578,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <div class="runlog">
           <h2><span>Recent runs</span><b>● active</b></h2>
           <ol id="runlog">
+            <li><time>Nov 2026</time><span>Published on HackerNoon: Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines</span></li>
             <li><time>Oct 2026</time><span>Invited keynote at TAIMMA 2027 and joined its Technical Program Committee</span></li>
             <li><time>Oct 2026</time><span>Released the PipeMend benchmark and the pipeverify GitHub Action</span></li>
             <li><time>Oct 2026</time><span>Released the LEGATO preprint and the ETL-TransBench benchmark</span></li>
@@ -708,6 +713,15 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
           </li>
         </ul>
         <div class="actions"><a class="btn primary" href="https://akshaysharma10.substack.com">Subscribe on Substack</a></div>
+        <p class="sub-h">Articles in other publications</p>
+        <ul class="items" id="articles">
+          <li>
+            <span class="title"><a href="https://hackernoon.com/benchmarking-claude-haiku-sonnet-and-opus-on-64-broken-data-pipelines">Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines</a></span>
+            <span class="tag pub">HackerNoon · Nov 2026</span>
+            <span class="meta">Which model tier is worth paying for when AI agents repair data pipelines, and why every tier still needs verification.</span>
+          </li>
+        </ul>
+        <div class="actions"><a class="btn ghost" href="https://hackernoon.com/about/akshaysharma10">HackerNoon profile</a> <a class="btn ghost" href="https://dzone.com/users/5620337/akshaysharma1088.html">DZone profile</a></div>
       </div>
     </div>
   </section>
@@ -769,6 +783,8 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
           <li><span>ORCID</span><a href="https://orcid.org/0009-0009-5718-2187" rel="me">0009-0009-5718-2187</a></li>
           <li><span>ResearchGate</span><a href="https://www.researchgate.net/profile/Akshay-Sharma-76" rel="me">researchgate.net/profile/Akshay-Sharma-76</a></li>
           <li><span>Sessionize</span><a href="https://sessionize.com/akshaysharma10/" rel="me">Speaker profile</a></li>
+          <li><span>DZone</span><a href="https://dzone.com/users/5620337/akshaysharma1088.html" rel="me">Author profile</a></li>
+          <li><span>HackerNoon</span><a href="https://hackernoon.com/about/akshaysharma10" rel="me">Author profile</a></li>
           <li><span>SSRN</span><a href="https://doi.org/10.2139/ssrn.7641619">Preprints on SSRN, linked by DOI above</a></li>
           <li><span>Zenodo</span>Code and data archived with DOIs, listed under Open benchmarks</li>
         </ul>
@@ -851,6 +867,12 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       li.appendChild(div); return li;
     }));
     if (d.skills) fill('skills', d.skills.map(function (s) { return el('span', 'tag', s); }));
+    if (d.articles) fill('articles', d.articles.map(function (a) {
+      var li = el('li'); var t = el('span', 'title'); t.appendChild(link(a.url, a.title)); li.appendChild(t);
+      li.appendChild(el('span', 'tag pub', [a.outlet, a.date].filter(Boolean).join(' · ')));
+      if (a.summary) li.appendChild(el('span', 'meta', a.summary));
+      return li;
+    }));
     ['reviewing', 'memberships', 'talks'].forEach(function (k) { if (d[k]) fill(k, d[k].map(function (t) { var li = el('li'); if (typeof t === 'string') li.textContent = t; else li.appendChild(link(t.url, t.text)); return li; })); });
   }
 
