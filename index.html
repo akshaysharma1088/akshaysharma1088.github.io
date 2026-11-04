@@ -446,6 +446,10 @@ nav a:hover { color: var(--ink); }
 .eyebrow { font-family: var(--mono); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--gold); margin: 0 0 18px; }
 .hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 5.2vw, 56px); line-height: 1.1; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
 .hero h1 em { font-style: italic; color: var(--gold); }
+/* The H1 carries the name for search engines; the large sentence keeps the old H1 look. */
+.hero h1.eyebrow { font-family: var(--mono); font-weight: 400; font-size: 13px; line-height: 1.4; letter-spacing: .06em; margin: 0 0 18px; }
+.hero .hero-title { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 5.2vw, 56px); line-height: 1.1; margin: 0; text-wrap: balance; letter-spacing: -0.01em; color: inherit; }
+.hero .hero-title em { font-style: italic; color: var(--gold); }
 .hero p.lead { font-size: 19px; color: var(--ink-2); max-width: 36em; margin: 24px 0 0; }
 .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 6px; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--ink); }
@@ -565,8 +569,8 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
   <div class="wrap">
     <section class="hero">
       <div>
-        <p class="eyebrow">Data engineering · Applied AI research</p>
-        <h1>I build data platforms, and study how AI agents can change production data <em>without breaking it.</em></h1>
+        <h1 class="eyebrow">Akshay Sharma · Data engineering · Applied AI research</h1>
+        <p class="hero-title">I build data platforms, and study how AI agents can change production data <em>without breaking it.</em></p>
         <p class="lead">Lead Member of Technical Staff at Salesforce, on the Customer Data Graphs team. Over 15 years in banking, retail and healthcare, including principal data engineering roles at Discover and Capital One. I publish open benchmarks so others can test the same questions.</p>
         <div class="actions">
           <a class="btn primary" href="#research">See research</a>
