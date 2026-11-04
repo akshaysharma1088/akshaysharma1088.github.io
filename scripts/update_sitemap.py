@@ -1,7 +1,11 @@
-"""Set each sitemap <lastmod> to the date of the last commit that changed that page's content.
+"""Keep page dates current for search engines.
 
-Run by the daily workflow and on every push to main, so Google sees fresh dates without
-anyone editing sitemap.xml by hand.
+- sitemap.xml: each <lastmod> = date of the last commit that changed that page's content.
+- index.html: the ProfilePage "dateModified" = the same moment as a full ISO 8601 datetime with
+  a time zone (Google rejects a bare date there).
+
+Commits made by this script ("Update sitemap dates") are ignored, so it never chases its own
+changes. Run by the daily workflow and on every push to main.
 """
 import re
 import subprocess
@@ -14,10 +18,26 @@ SOURCES = {  # page URL -> files whose changes count as a change to that page
 }
 
 
-def last_change(files):
-    out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", *files],
-                         capture_output=True, text=True, check=True).stdout.strip()
+SELF = "^Update sitemap dates"
+
+
+def last_change(files, fmt="%cs"):
+    out = subprocess.run(["git", "log", "-1", f"--format={fmt}", "--invert-grep", f"--grep={SELF}",
+                          "--", *files], capture_output=True, text=True, check=True).stdout.strip()
     return out or None
+
+
+def update_profile_date():
+    stamp = last_change(SOURCES["https://akshaysharma1088.github.io/"], fmt="%cI")
+    if not stamp:
+        return False
+    html = open("index.html", encoding="utf-8").read()
+    new = re.sub(r'("dateModified":\s*")[^"]*(")', lambda m: m.group(1) + stamp + m.group(2), html, count=1)
+    if new != html:
+        open("index.html", "w", encoding="utf-8").write(new)
+        print("index.html dateModified updated")
+        return True
+    return False
 
 
 def main():
@@ -34,6 +54,7 @@ def main():
         print("sitemap.xml updated")
     else:
         print("sitemap.xml already current")
+    update_profile_date()
     return 0
 
 
