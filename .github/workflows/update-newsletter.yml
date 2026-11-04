@@ -1,6 +1,8 @@
 name: Update newsletter posts
 
 on:
+  push:
+    branches: [main]         # keeps sitemap dates current after every merge
   schedule:
     - cron: "17 12 * * *"   # once a day, 12:17 UTC
   workflow_dispatch:         # lets you run it by hand from the Actions tab
@@ -13,19 +15,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # full history, so the sitemap can use each page's last change date
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Fetch latest Substack issues
         run: python scripts/fetch_substack.py
-      - name: Commit if changed
+      - name: Commit new posts
         run: |
           if git diff --quiet -- posts.json; then
-            echo "No changes"
+            echo "No new posts"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add posts.json
             git commit -m "Update newsletter posts"
-            git push
           fi
+      - name: Update sitemap dates
+        run: python scripts/update_sitemap.py
+      - name: Commit sitemap and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- sitemap.xml; then
+            git add sitemap.xml
+            git commit -m "Update sitemap dates"
+          fi
+          git push
