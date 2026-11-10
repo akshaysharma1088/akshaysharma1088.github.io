@@ -3,6 +3,14 @@
   "runlog": [
     {
       "date": "Nov 2026",
+      "text": "Published in the Snowflake Builders Blog: From Support Transcripts to Trusted AI Agents"
+    },
+    {
+      "date": "Nov 2026",
+      "text": "Paper accepted at IEEE CCWC 2027: Bounded Contexts or Graph Communities?"
+    },
+    {
+      "date": "Nov 2026",
       "text": "Published on HackerNoon: Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines"
     },
     {
@@ -169,6 +177,20 @@
     }
   ],
   "articles": [
+    {
+      "title": "From Support Transcripts to Trusted AI Agents: Building a Knowledge Architecture with Snowflake",
+      "url": "https://medium.com/snowflake/from-support-transcripts-to-trusted-ai-agents-building-a-knowledge-architecture-with-snowflake-4569fe0ebd5a",
+      "outlet": "Snowflake Builders Blog",
+      "date": "Nov 2026",
+      "summary": "How to turn raw support transcripts into a governed knowledge layer in Snowflake that AI agents can trust."
+    },
+    {
+      "title": "Beyond Sentiment: Customer Intelligence with Snowflake Cortex AI and Streamlit",
+      "url": "https://dev.to/akshaysharma10/beyond-sentiment-customer-intelligence-with-snowflake-cortex-ai-and-streamlit-280m",
+      "outlet": "DEV Community",
+      "date": "Nov 2026",
+      "summary": "Classifying support messages by evidence of resolution, not sentiment, with Cortex AI_CLASSIFY and Streamlit in Snowflake."
+    },
     {
       "title": "Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines",
       "url": "https://hackernoon.com/benchmarking-claude-haiku-sonnet-and-opus-on-64-broken-data-pipelines",
