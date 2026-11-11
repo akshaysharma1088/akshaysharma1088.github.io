@@ -178,6 +178,13 @@
   ],
   "articles": [
     {
+      "title": "Old-School Rules vs. Open-Source LLMs: A Three-Round Fight Over Fake Bank Statements",
+      "url": "https://hackernoon.com/old-school-rules-vs-open-source-llms-a-three-round-fight-over-fake-bank-statements",
+      "outlet": "HackerNoon",
+      "date": "Nov 2026",
+      "summary": "Tuned string rules against open-weights LLMs on doctored bank statements, and why the rules mostly won."
+    },
+    {
       "title": "From Support Transcripts to Trusted AI Agents: Building a Knowledge Architecture with Snowflake",
       "url": "https://medium.com/snowflake/from-support-transcripts-to-trusted-ai-agents-building-a-knowledge-architecture-with-snowflake-4569fe0ebd5a",
       "outlet": "Snowflake Builders Blog",
