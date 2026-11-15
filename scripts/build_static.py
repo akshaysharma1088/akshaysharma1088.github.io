@@ -32,9 +32,17 @@ def card(c):
     if c.get("status"):
         out.append(f'<span class="{tag_class(c["status"])}">{e(c["status"])}</span>')
     out.append("</div>")
+    mark = c.get("mark") or c["name"][:3].upper()
+    logo_file = ROOT / c["logo"] if c.get("logo") else None
+    if logo_file and logo_file.exists():
+        logo = f'<img src="{e(c["logo"])}" alt="">'
+    else:
+        logo = f"<b>{e(mark)}</b>"
+    out.append(f'<div class="head"><div class="logo">{logo}</div><div>')
     out.append(f'<h3>{link(c.get("url"), c["name"])}</h3>')
     if c.get("meta"):
         out.append(f'<p class="where">{e(c["meta"])}</p>')
+    out.append("</div></div>")
     if c.get("items"):
         out.append("<ul>")
         for it in c["items"]:

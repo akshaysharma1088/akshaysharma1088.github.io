@@ -1,5 +1,5 @@
 {
-  "_how_to_edit": "Edit this file to update the site; every list renders in the order written. Placards: research_cards, outlet_cards, speaking_cards and service_cards each hold cards with kind, name, meta, status, optional url and wide, and items (title, url, note). Then run python3 scripts/build_static.py so index.html's static copy, which search engines read, matches.",
+  "_how_to_edit": "Edit this file to update the site; every list renders in the order written. Placards: research_cards, outlet_cards, speaking_cards and service_cards each hold cards with kind, name, meta, status, optional url and wide, and items (title, url, note). Then run python3 scripts/build_static.py so index.html's static copy, which search engines read, matches. Each card shows its logo from the `logo` path (assets/logos/*.png) when that file exists, and otherwise a badge with the short `mark` text.",
   "runlog": [
     {
       "date": "Nov 2026",
@@ -46,7 +46,9 @@
           "url": "https://doi.org/10.1049/sfw2/4364820",
           "note": "DOI 10.1049/sfw2/4364820"
         }
-      ]
+      ],
+      "mark": "IET",
+      "logo": "assets/logos/iet.png"
     },
     {
       "kind": "Conference",
@@ -60,7 +62,9 @@
           "url": "https://github.com/akshaysharma1088/governed-kg-retrieval",
           "note": "Code and data on GitHub"
         }
-      ]
+      ],
+      "mark": "IEEE",
+      "logo": "assets/logos/ieee-ccwc.png"
     },
     {
       "kind": "Conference",
@@ -73,7 +77,9 @@
           "url": "",
           "note": "G. Sharma, A. Sharma, D. Singh"
         }
-      ]
+      ],
+      "mark": "ISASF",
+      "logo": "assets/logos/isasf.png"
     },
     {
       "kind": "Conference",
@@ -86,7 +92,9 @@
           "url": "",
           "note": "G. Sharma, A. Sharma, S. A. Syed"
         }
-      ]
+      ],
+      "mark": "IIPEM",
+      "logo": "assets/logos/iipem.png"
     },
     {
       "kind": "Research",
@@ -140,7 +148,9 @@
           "url": "https://doi.org/10.2139/ssrn.6297121",
           "note": "SSRN"
         }
-      ]
+      ],
+      "mark": "SSRN",
+      "logo": "assets/logos/preprints.png"
     }
   ],
   "benchmarks": [
@@ -221,7 +231,9 @@
           "url": "https://hackernoon.com/benchmarking-claude-haiku-sonnet-and-opus-on-64-broken-data-pipelines",
           "note": "Nov 2026"
         }
-      ]
+      ],
+      "mark": "HN",
+      "logo": "assets/logos/hackernoon.png"
     },
     {
       "kind": "Publication",
@@ -235,7 +247,9 @@
           "url": "https://medium.com/snowflake/from-support-transcripts-to-trusted-ai-agents-building-a-knowledge-architecture-with-snowflake-4569fe0ebd5a",
           "note": "Nov 2026"
         }
-      ]
+      ],
+      "mark": "SF",
+      "logo": "assets/logos/snowflake.png"
     },
     {
       "kind": "Publication",
@@ -249,7 +263,9 @@
           "url": "https://dev.to/akshaysharma10/beyond-sentiment-customer-intelligence-with-snowflake-cortex-ai-and-streamlit-280m",
           "note": "Nov 2026"
         }
-      ]
+      ],
+      "mark": "DEV",
+      "logo": "assets/logos/dev.png"
     },
     {
       "kind": "Publication",
@@ -263,7 +279,9 @@
           "url": "https://dzone.com/users/5620337/akshaysharma1088.html",
           "note": "See the author profile"
         }
-      ]
+      ],
+      "mark": "DZ",
+      "logo": "assets/logos/dzone.png"
     }
   ],
   "speaking_cards": [
@@ -279,7 +297,9 @@
           "url": "https://www.taimma-conf.org/",
           "note": "Also on the Technical Program Committee"
         }
-      ]
+      ],
+      "mark": "TAIMMA",
+      "logo": "assets/logos/taimma.png"
     },
     {
       "kind": "Conference",
@@ -293,7 +313,9 @@
           "url": "",
           "note": "Pre-recorded talk"
         }
-      ]
+      ],
+      "mark": "C42",
+      "logo": "assets/logos/conf42.png"
     },
     {
       "kind": "Talks",
@@ -332,7 +354,9 @@
           "url": "",
           "note": ""
         }
-      ]
+      ],
+      "mark": "TALKS",
+      "logo": "assets/logos/talks.png"
     }
   ],
   "service_cards": [
@@ -341,14 +365,18 @@
       "name": "IEEE Access",
       "meta": "Peer reviewer",
       "status": "13 reviews",
-      "items": []
+      "items": [],
+      "mark": "IEEE",
+      "logo": "assets/logos/ieee-access.png"
     },
     {
       "kind": "Magazine",
       "name": "IEEE IT Professional",
       "meta": "Peer reviewer",
       "status": "3 reviews",
-      "items": []
+      "items": [],
+      "mark": "IEEE",
+      "logo": "assets/logos/ieee-itpro.png"
     },
     {
       "kind": "Conference",
@@ -356,7 +384,9 @@
       "url": "https://www.taimma-conf.org/",
       "meta": "Technical Program Committee · Springer CCIS",
       "status": "4 papers reviewed",
-      "items": []
+      "items": [],
+      "mark": "TAIMMA",
+      "logo": "assets/logos/taimma.png"
     },
     {
       "kind": "Hackathons",
@@ -374,7 +404,9 @@
           "url": "",
           "note": ""
         }
-      ]
+      ],
+      "mark": "HACK",
+      "logo": "assets/logos/hackathons.png"
     },
     {
       "kind": "Membership",
@@ -392,7 +424,9 @@
           "url": "",
           "note": ""
         }
-      ]
+      ],
+      "mark": "IEEE",
+      "logo": "assets/logos/memberships.png"
     },
     {
       "kind": "Recognition",
@@ -405,7 +439,9 @@
           "url": "",
           "note": ""
         }
-      ]
+      ],
+      "mark": "UK",
+      "logo": "assets/logos/uk-design.png"
     }
   ],
   "experience": [
