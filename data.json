@@ -1,6 +1,22 @@
 {
-  "_how_to_edit": "Edit this file to update the site. Each list renders in the order written. Status for research: Published, Preprint or Under review. Keep index.html's static copy in step so search engines see the same content.",
+  "_how_to_edit": "Edit this file to update the site; every list renders in the order written. Placards: research_cards, outlet_cards, speaking_cards and service_cards each hold cards with kind, name, meta, status, optional url and wide, and items (title, url, note). Then run python3 scripts/build_static.py so index.html's static copy, which search engines read, matches.",
   "runlog": [
+    {
+      "date": "Nov 2026",
+      "text": "DataRanger and pipeverify earn the OpenSSF Best Practices badge; dbt package released"
+    },
+    {
+      "date": "Nov 2026",
+      "text": "DataRanger 0.5 adds Snowflake, dbt, a GitHub Action and an MCP server"
+    },
+    {
+      "date": "Nov 2026",
+      "text": "Published on HackerNoon: How to Evaluate Snowflake Cortex Embedding Models for Enterprise Search"
+    },
+    {
+      "date": "Nov 2026",
+      "text": "Talk accepted at Conf42 Chaos Engineering 2026"
+    },
     {
       "date": "Nov 2026",
       "text": "Published in the Snowflake Builders Blog: From Support Transcripts to Trusted AI Agents"
@@ -16,125 +32,137 @@
     {
       "date": "Oct 2026",
       "text": "Invited keynote at TAIMMA 2027 and joined its Technical Program Committee"
-    },
-    {
-      "date": "Oct 2026",
-      "text": "Released the PipeMend benchmark and the pipeverify GitHub Action"
-    },
-    {
-      "date": "Oct 2026",
-      "text": "Released the LEGATO preprint and the ETL-TransBench benchmark"
-    },
-    {
-      "date": "Jul 2026",
-      "text": "Joined Salesforce as Lead Member of Technical Staff"
-    },
-    {
-      "date": "May 2026",
-      "text": "Published in IET Software"
     }
   ],
-  "research": [
+  "research_cards": [
     {
-      "title": "Domain-Driven Data and AI Platforms: Governing Analytics and Machine Learning Pipelines at Scale",
-      "url": "https://doi.org/10.1049/sfw2/4364820",
-      "doi": "10.1049/sfw2/4364820",
+      "kind": "Journal",
+      "name": "IET Software",
+      "meta": "Wiley and the IET · 2026",
       "status": "Published",
-      "venue": "IET Software",
-      "year": "2026",
-      "summary": "A domain-driven reference architecture for governing analytics and ML pipelines in large enterprises."
+      "items": [
+        {
+          "title": "Domain-Driven Data and AI Platforms: Governing Analytics and Machine Learning Pipelines at Scale",
+          "url": "https://doi.org/10.1049/sfw2/4364820",
+          "note": "DOI 10.1049/sfw2/4364820"
+        }
+      ]
     },
     {
-      "title": "LEGATO: Agentic Large Language Model Translation of Legacy ETL Workflows to Modern Dataflow Code with Test-Based Semantic Verification",
-      "url": "https://doi.org/10.13140/RG.2.2.35761.34403",
-      "doi": "10.13140/RG.2.2.35761.34403",
-      "status": "Preprint",
-      "year": "2026",
-      "summary": "An agent that translates legacy ETL into Spark and checks every translation against executable data tests."
+      "kind": "Conference",
+      "name": "IEEE CCWC 2027",
+      "url": "https://ieee-ccwc.org/",
+      "meta": "Las Vegas, Nevada · January 4–6, 2027",
+      "status": "Accepted",
+      "items": [
+        {
+          "title": "Bounded Contexts or Graph Communities? Partitioning Enterprise Knowledge Graphs for Governed Retrieval",
+          "url": "https://github.com/akshaysharma1088/governed-kg-retrieval",
+          "note": "Code and data on GitHub"
+        }
+      ]
     },
     {
-      "title": "Fix or Page? Silent Harm and Safe Escalation When LLM Agents Remediate Data Pipeline Incidents",
-      "url": "https://doi.org/10.2139/ssrn.7641619",
-      "doi": "10.2139/ssrn.7641619",
-      "status": "Preprint",
-      "year": "2026",
-      "summary": "64 broken pipelines, three model sizes: data quality monitors approved every harmful fix, while the agents' own confidence was the useful safety signal."
+      "kind": "Conference",
+      "name": "ISASF 2026",
+      "meta": "Co-authored paper",
+      "status": "Accepted",
+      "items": [
+        {
+          "title": "Risk-Aware Self-Healing Cloud Infrastructure Using Agentic AI and Policy-Based Remediation for Regulated Financial Systems",
+          "url": "",
+          "note": "G. Sharma, A. Sharma, D. Singh"
+        }
+      ]
     },
     {
-      "title": "When the Rules Collide: Explainability, Fairness, and Model Risk Governance in Credit Machine Learning",
-      "url": "https://doi.org/10.2139/ssrn.7653558",
-      "doi": "10.2139/ssrn.7653558",
-      "status": "Preprint",
-      "year": "2026",
-      "summary": "A review of how fair lending law, model risk guidance and capital rules constrain one another in credit ML."
-    },
-    {
-      "title": "An Event-Driven Medallion Architecture with Domain-Driven Design for Training-Serving Consistent Credit Risk Feature Engineering",
-      "url": "https://doi.org/10.2139/ssrn.7653523",
-      "doi": "10.2139/ssrn.7653523",
-      "status": "Preprint",
-      "year": "2026",
-      "summary": "Event-driven medallion pipelines that keep credit risk features consistent between training and serving."
-    },
-    {
-      "title": "Agent-Oriented Reference Architecture for Domain-Driven Enterprise Data Platforms",
-      "url": "https://doi.org/10.2139/ssrn.7653520",
-      "doi": "10.2139/ssrn.7653520",
-      "status": "Preprint",
-      "year": "2026",
-      "summary": "A reference architecture for running AI agents over domain-owned enterprise data."
-    },
-    {
-      "title": "Domain-Driven Governance for Regulated Lakehouses: A Contract-Based Architecture and Reproducible Evaluation on Snowflake",
-      "url": "https://www.researchgate.net/publication/416348559",
-      "status": "Preprint",
-      "year": "2026",
-      "summary": "Governance that propagates across domains, measured with a reproducible Snowflake benchmark."
-    },
-    {
-      "title": "Proactive Credit Line Increase Using Risk-Constrained Explainable Machine Learning",
-      "url": "https://www.researchgate.net/publication/404468422",
-      "authors": "A. Sharma, G. Sharma",
-      "status": "Preprint",
-      "year": "2026",
-      "summary": "Credit line decisions as constrained profit maximization, with calibrated models, SHAP explanations and fairness limits."
-    },
-    {
-      "title": "FraudRAG: Knowledge Graph-Augmented Retrieval for Real-Time Financial Statement Fraud Detection Using a Domain-Driven Medallion Architecture",
-      "url": "https://doi.org/10.2139/ssrn.6714178",
-      "doi": "10.2139/ssrn.6714178",
-      "status": "Preprint",
-      "year": "2026",
-      "summary": "A Graph-RAG pipeline combining a Neo4j knowledge graph and vector retrieval to check financial statements."
-    },
-    {
-      "title": "A Domain-Driven Reference Architecture for Scalable and Governed Data Systems in Regulated Enterprises",
-      "url": "https://doi.org/10.2139/ssrn.6297121",
-      "doi": "10.2139/ssrn.6297121",
-      "status": "Preprint",
-      "year": "2026",
-      "summary": "The reference architecture behind domain-owned, governed data platforms in banking."
-    },
-    {
-      "title": "Risk-Aware FinOps Optimization Using Machine Learning in Regulated Multi-Cloud Environments",
-      "url": "",
-      "authors": "G. Sharma, A. Sharma, S. A. Syed",
+      "kind": "Conference",
+      "name": "IIPEM 2026",
+      "meta": "Co-authored paper",
       "status": "Under review",
-      "venue": "IIPEM 2026",
-      "year": "2026",
-      "summary": "Calibrated cost forecasts and tail-risk optimization for cloud spend under data residency rules."
+      "items": [
+        {
+          "title": "Risk-Aware FinOps Optimization Using Machine Learning in Regulated Multi-Cloud Environments",
+          "url": "",
+          "note": "G. Sharma, A. Sharma, S. A. Syed"
+        }
+      ]
     },
     {
-      "title": "Risk-Aware Self-Healing Cloud Infrastructure Using Agentic AI and Policy-Based Remediation for Regulated Financial Systems",
-      "url": "",
-      "authors": "G. Sharma, A. Sharma, D. Singh",
-      "status": "Under review",
-      "venue": "ISASF 2026",
-      "year": "2026",
-      "summary": "Agents propose repairs; a deterministic policy gate decides what may run."
+      "kind": "Research",
+      "name": "Preprints",
+      "meta": "9 papers · posted on SSRN and ResearchGate · 2026",
+      "status": "Preprint",
+      "wide": true,
+      "items": [
+        {
+          "title": "LEGATO: Agentic Large Language Model Translation of Legacy ETL Workflows to Modern Dataflow Code with Test-Based Semantic Verification",
+          "url": "https://doi.org/10.13140/RG.2.2.35761.34403",
+          "note": "ResearchGate"
+        },
+        {
+          "title": "Fix or Page? Silent Harm and Safe Escalation When LLM Agents Remediate Data Pipeline Incidents",
+          "url": "https://doi.org/10.2139/ssrn.7641619",
+          "note": "SSRN"
+        },
+        {
+          "title": "When the Rules Collide: Explainability, Fairness, and Model Risk Governance in Credit Machine Learning",
+          "url": "https://doi.org/10.2139/ssrn.7653558",
+          "note": "SSRN"
+        },
+        {
+          "title": "An Event-Driven Medallion Architecture with Domain-Driven Design for Training-Serving Consistent Credit Risk Feature Engineering",
+          "url": "https://doi.org/10.2139/ssrn.7653523",
+          "note": "SSRN"
+        },
+        {
+          "title": "Agent-Oriented Reference Architecture for Domain-Driven Enterprise Data Platforms",
+          "url": "https://doi.org/10.2139/ssrn.7653520",
+          "note": "SSRN"
+        },
+        {
+          "title": "Domain-Driven Governance for Regulated Lakehouses: A Contract-Based Architecture and Reproducible Evaluation on Snowflake",
+          "url": "https://www.researchgate.net/publication/416348559",
+          "note": "ResearchGate"
+        },
+        {
+          "title": "Proactive Credit Line Increase Using Risk-Constrained Explainable Machine Learning",
+          "url": "https://www.researchgate.net/publication/404468422",
+          "note": "ResearchGate · A. Sharma, G. Sharma"
+        },
+        {
+          "title": "FraudRAG: Knowledge Graph-Augmented Retrieval for Real-Time Financial Statement Fraud Detection Using a Domain-Driven Medallion Architecture",
+          "url": "https://doi.org/10.2139/ssrn.6714178",
+          "note": "SSRN"
+        },
+        {
+          "title": "A Domain-Driven Reference Architecture for Scalable and Governed Data Systems in Regulated Enterprises",
+          "url": "https://doi.org/10.2139/ssrn.6297121",
+          "note": "SSRN"
+        }
+      ]
     }
   ],
   "benchmarks": [
+    {
+      "name": "DataRanger",
+      "repo": "akshaysharma1088/dataranger",
+      "summary": "Data repair agent that applies only the fixes it can prove against the source, and sends the rest to a person. Snowflake, dbt, DuckDB, GitHub Action, MCP. OpenSSF Best Practices badge.",
+      "doi": "10.5281/zenodo.23787418",
+      "pypi": "dataranger"
+    },
+    {
+      "name": "pipeverify",
+      "repo": "akshaysharma1088/pipeverify",
+      "summary": "Checks a pipeline change before it merges and returns pass, review or block. CLI, GitHub Action, dbt and Snowflake sources, MCP. OpenSSF Best Practices badge.",
+      "doi": "10.5281/zenodo.23542277",
+      "pypi": "pipeverify"
+    },
+    {
+      "name": "dbt-dataranger",
+      "repo": "akshaysharma1088/dbt-dataranger",
+      "summary": "dbt package that reconciles a model with the raw table it was built from, day by day."
+    },
     {
       "name": "ETL-TransBench",
       "repo": "akshaysharma1088/etl-transbench",
@@ -146,12 +174,6 @@
       "repo": "akshaysharma1088/pipemend",
       "summary": "64 broken pipelines graded on whether the data is right afterwards.",
       "doi": "10.5281/zenodo.23510784"
-    },
-    {
-      "name": "pipeverify",
-      "repo": "akshaysharma1088/pipeverify",
-      "summary": "GitHub Action that checks pipeline changes against real data before they ship.",
-      "doi": "10.5281/zenodo.23542277"
     },
     {
       "name": "Lakehouse governance bench",
@@ -176,34 +198,214 @@
       "summary": "Research prototype for evidence-grounded financial document checks."
     }
   ],
-  "articles": [
+  "outlet_cards": [
     {
-      "title": "Old-School Rules vs. Open-Source LLMs: A Three-Round Fight Over Fake Bank Statements",
-      "url": "https://hackernoon.com/old-school-rules-vs-open-source-llms-a-three-round-fight-over-fake-bank-statements",
-      "outlet": "HackerNoon",
-      "date": "Nov 2026",
-      "summary": "Tuned string rules against open-weights LLMs on doctored bank statements, and why the rules mostly won."
+      "kind": "Publication",
+      "name": "HackerNoon",
+      "url": "https://hackernoon.com/about/akshaysharma10",
+      "meta": "3 articles · Author profile",
+      "status": "Published",
+      "items": [
+        {
+          "title": "How to Evaluate Snowflake Cortex Embedding Models for Enterprise Search",
+          "url": "https://hackernoon.com/how-to-evaluate-snowflake-cortex-embedding-models-for-enterprise-search",
+          "note": "Nov 2026"
+        },
+        {
+          "title": "Old-School Rules vs. Open-Source LLMs: A Three-Round Fight Over Fake Bank Statements",
+          "url": "https://hackernoon.com/old-school-rules-vs-open-source-llms-a-three-round-fight-over-fake-bank-statements",
+          "note": "Nov 2026"
+        },
+        {
+          "title": "Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines",
+          "url": "https://hackernoon.com/benchmarking-claude-haiku-sonnet-and-opus-on-64-broken-data-pipelines",
+          "note": "Nov 2026"
+        }
+      ]
     },
     {
-      "title": "From Support Transcripts to Trusted AI Agents: Building a Knowledge Architecture with Snowflake",
-      "url": "https://medium.com/snowflake/from-support-transcripts-to-trusted-ai-agents-building-a-knowledge-architecture-with-snowflake-4569fe0ebd5a",
-      "outlet": "Snowflake Builders Blog",
-      "date": "Nov 2026",
-      "summary": "How to turn raw support transcripts into a governed knowledge layer in Snowflake that AI agents can trust."
+      "kind": "Publication",
+      "name": "Snowflake Builders Blog",
+      "url": "https://medium.com/snowflake",
+      "meta": "Snowflake's community blog on Medium",
+      "status": "Published",
+      "items": [
+        {
+          "title": "From Support Transcripts to Trusted AI Agents: Building a Knowledge Architecture with Snowflake",
+          "url": "https://medium.com/snowflake/from-support-transcripts-to-trusted-ai-agents-building-a-knowledge-architecture-with-snowflake-4569fe0ebd5a",
+          "note": "Nov 2026"
+        }
+      ]
     },
     {
-      "title": "Beyond Sentiment: Customer Intelligence with Snowflake Cortex AI and Streamlit",
-      "url": "https://dev.to/akshaysharma10/beyond-sentiment-customer-intelligence-with-snowflake-cortex-ai-and-streamlit-280m",
-      "outlet": "DEV Community",
-      "date": "Nov 2026",
-      "summary": "Classifying support messages by evidence of resolution, not sentiment, with Cortex AI_CLASSIFY and Streamlit in Snowflake."
+      "kind": "Publication",
+      "name": "DEV Community",
+      "url": "https://dev.to/akshaysharma10",
+      "meta": "Author profile",
+      "status": "Published",
+      "items": [
+        {
+          "title": "Beyond Sentiment: Customer Intelligence with Snowflake Cortex AI and Streamlit",
+          "url": "https://dev.to/akshaysharma10/beyond-sentiment-customer-intelligence-with-snowflake-cortex-ai-and-streamlit-280m",
+          "note": "Nov 2026"
+        }
+      ]
     },
     {
-      "title": "Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines",
-      "url": "https://hackernoon.com/benchmarking-claude-haiku-sonnet-and-opus-on-64-broken-data-pipelines",
-      "outlet": "HackerNoon",
-      "date": "Nov 2026",
-      "summary": "Which model tier is worth paying for when AI agents repair data pipelines, and why every tier still needs verification."
+      "kind": "Publication",
+      "name": "DZone",
+      "url": "https://dzone.com/users/5620337/akshaysharma1088.html",
+      "meta": "Author profile",
+      "status": "",
+      "items": [
+        {
+          "title": "Articles on DZone",
+          "url": "https://dzone.com/users/5620337/akshaysharma1088.html",
+          "note": "See the author profile"
+        }
+      ]
+    }
+  ],
+  "speaking_cards": [
+    {
+      "kind": "Conference",
+      "name": "TAIMMA 2027",
+      "url": "https://www.taimma-conf.org/",
+      "meta": "Online · March 27–28, 2027 · Springer CCIS",
+      "status": "Invited keynote",
+      "items": [
+        {
+          "title": "When AI Agents Touch Production Data: Lessons from Building and Verifying LLM-Driven Data Systems",
+          "url": "https://www.taimma-conf.org/",
+          "note": "Also on the Technical Program Committee"
+        }
+      ]
+    },
+    {
+      "kind": "Conference",
+      "name": "Conf42 Chaos Engineering 2026",
+      "url": "https://www.conf42.com/",
+      "meta": "Online · December 2, 2026",
+      "status": "Talk",
+      "items": [
+        {
+          "title": "Your Monitors Approved Every Bad Fix: What Happened When AI Agents Repaired 64 Broken Pipelines",
+          "url": "",
+          "note": "Pre-recorded talk"
+        }
+      ]
+    },
+    {
+      "kind": "Talks",
+      "name": "Earlier talks and workshops",
+      "meta": "Industry and community events",
+      "status": "",
+      "wide": true,
+      "items": [
+        {
+          "title": "The Economist",
+          "url": "",
+          "note": ""
+        },
+        {
+          "title": "Dreamforce",
+          "url": "",
+          "note": ""
+        },
+        {
+          "title": "Snowflake workshop",
+          "url": "",
+          "note": ""
+        },
+        {
+          "title": "USAII mentor workshop",
+          "url": "",
+          "note": ""
+        },
+        {
+          "title": "Discover technical leader workshop",
+          "url": "",
+          "note": ""
+        },
+        {
+          "title": "Keynote, hackathon in Cincinnati",
+          "url": "",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "service_cards": [
+    {
+      "kind": "Journal",
+      "name": "IEEE Access",
+      "meta": "Peer reviewer",
+      "status": "13 reviews",
+      "items": []
+    },
+    {
+      "kind": "Magazine",
+      "name": "IEEE IT Professional",
+      "meta": "Peer reviewer",
+      "status": "3 reviews",
+      "items": []
+    },
+    {
+      "kind": "Conference",
+      "name": "TAIMMA 2027",
+      "url": "https://www.taimma-conf.org/",
+      "meta": "Technical Program Committee · Springer CCIS",
+      "status": "4 papers reviewed",
+      "items": []
+    },
+    {
+      "kind": "Hackathons",
+      "name": "Judge and mentor",
+      "meta": "RevolutionUC, LA Hacks, FinBilim and others",
+      "status": "6 judged",
+      "items": [
+        {
+          "title": "Mentor, USC AI Hackathon",
+          "url": "",
+          "note": ""
+        },
+        {
+          "title": "Technical mentor, CodePath",
+          "url": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "kind": "Membership",
+      "name": "IEEE and IET",
+      "meta": "Professional bodies",
+      "status": "",
+      "items": [
+        {
+          "title": "IEEE Senior Member",
+          "url": "",
+          "note": ""
+        },
+        {
+          "title": "Member, Institution of Engineering and Technology (IET)",
+          "url": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "kind": "Recognition",
+      "name": "UK Registered Design",
+      "meta": "No. 6512069 · 2026, co-registered",
+      "status": "",
+      "items": [
+        {
+          "title": "AI-based device for cloud data security",
+          "url": "",
+          "note": ""
+        }
+      ]
     }
   ],
   "experience": [
@@ -242,31 +444,5 @@
     "Neo4j",
     "Ab Initio modernization",
     "LLM agents"
-  ],
-  "reviewing": [
-    {
-      "text": "Technical Program Committee, TAIMMA 2027 (Springer CCIS)",
-      "url": "https://www.taimma-conf.org/"
-    },
-    "Peer reviewer, IEEE Access and IEEE IT Professional (15 reviews)",
-    "Hackathon judge, including RevolutionUC, LA Hacks and FinBilim",
-    "Mentor, USC AI Hackathon"
-  ],
-  "memberships": [
-    "IEEE Senior Member",
-    "Member, Institution of Engineering and Technology (IET)",
-    "UK Registered Design No. 6512069, AI-based device for cloud data security (2026, co-registered)"
-  ],
-  "talks": [
-    {
-      "text": "Invited keynote, TAIMMA 2027: \"When AI Agents Touch Production Data: Lessons from Building and Verifying LLM-Driven Data Systems\" (March 2027, online)",
-      "url": "https://www.taimma-conf.org/"
-    },
-    "The Economist",
-    "Dreamforce",
-    "Snowflake workshop",
-    "USAII mentor workshop",
-    "Discover technical leader workshop",
-    "Keynote, hackathon in Cincinnati"
   ]
 }

@@ -547,6 +547,28 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 .stats { display: block; font-family: var(--mono); font-size: 12px; color: var(--ink-2); margin-top: 6px; min-height: 1.4em; }
 .items li[hidden] { display: none; }
 .authors { display: block; font-family: var(--mono); font-size: 12px; margin-top: 2px; }
+
+/* placards */
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 16px 18px 14px; display: flex; flex-direction: column; gap: 6px; }
+.card.wide { grid-column: 1 / -1; }
+.card .card-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.card .kind { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+.card h3 { font-family: var(--display); font-weight: 500; font-size: 21px; line-height: 1.25; margin: 2px 0 0; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; text-decoration-color: var(--gold); }
+.card .where { margin: 0; font-size: 14px; color: var(--ink-2); }
+.card ul { list-style: none; margin: 8px 0 0; padding: 10px 0 0; border-top: 1px solid var(--rule); display: grid; gap: 10px; }
+.card.wide ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; }
+@media (max-width: 640px) { .card.wide ul { grid-template-columns: 1fr; } }
+.card li { font-size: 15px; line-height: 1.45; }
+.card li .note { display: block; font-family: var(--mono); font-size: 12px; color: var(--ink-2); margin-top: 2px; }
+.tag.acc { color: #1f5fbf; border-color: color-mix(in srgb, #1f5fbf 40%, var(--rule)); }
+.tag.inv { color: var(--gold); border-color: color-mix(in srgb, var(--gold) 40%, var(--rule)); }
+:root[data-theme="dark"] .tag.acc { color: #7fb0f5; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tag.acc { color: #7fb0f5; } }
+.bench .pypi { display: inline-block; font-family: var(--mono); font-size: 12px; color: var(--ok); margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -583,16 +605,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <div class="portrait"><span aria-hidden="true">AS</span><img src="profile_pic.jpg" alt="Akshay Sharma" onerror="this.remove()"></div>
         <div class="runlog">
           <h2><span>Recent runs</span><b>● active</b></h2>
-          <ol id="runlog">
-            <li><time>Nov 2026</time><span>Published in the Snowflake Builders Blog: From Support Transcripts to Trusted AI Agents</span></li>
-            <li><time>Nov 2026</time><span>Paper accepted at IEEE CCWC 2027: Bounded Contexts or Graph Communities?</span></li>
-            <li><time>Nov 2026</time><span>Published on HackerNoon: Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines</span></li>
-            <li><time>Oct 2026</time><span>Invited keynote at TAIMMA 2027 and joined its Technical Program Committee</span></li>
-            <li><time>Oct 2026</time><span>Released the PipeMend benchmark and the pipeverify GitHub Action</span></li>
-            <li><time>Oct 2026</time><span>Released the LEGATO preprint and the ETL-TransBench benchmark</span></li>
-            <li><time>Jul 2026</time><span>Joined Salesforce as Lead Member of Technical Staff</span></li>
-            <li><time>May 2026</time><span>Published in IET Software</span></li>
-          </ol>
+          <ol id="runlog"><!-- gen:runlog --><li><time>Nov 2026</time><span>DataRanger and pipeverify earn the OpenSSF Best Practices badge; dbt package released</span></li><li><time>Nov 2026</time><span>DataRanger 0.5 adds Snowflake, dbt, a GitHub Action and an MCP server</span></li><li><time>Nov 2026</time><span>Published on HackerNoon: How to Evaluate Snowflake Cortex Embedding Models for Enterprise Search</span></li><li><time>Nov 2026</time><span>Talk accepted at Conf42 Chaos Engineering 2026</span></li><li><time>Nov 2026</time><span>Published in the Snowflake Builders Blog: From Support Transcripts to Trusted AI Agents</span></li><li><time>Nov 2026</time><span>Paper accepted at IEEE CCWC 2027: Bounded Contexts or Graph Communities?</span></li><li><time>Nov 2026</time><span>Published on HackerNoon: Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines</span></li><li><time>Oct 2026</time><span>Invited keynote at TAIMMA 2027 and joined its Technical Program Committee</span></li><!-- /gen:runlog --></ol>
         </div>
       </aside>
     </section>
@@ -604,85 +617,10 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       <div>
         <h2>Evidence over hype</h2>
         <p class="intro" id="research-intro">My research asks practical questions about AI in data systems and answers them with executable benchmarks: does the translated pipeline produce the same data, does the fix leave the tables correct, and when should an agent hand off to a person.</p>
-        <div class="filters" role="group" aria-label="Filter research">
-          <button type="button" class="chip" aria-pressed="true" data-f="All">All</button>
-          <button type="button" class="chip" aria-pressed="false" data-f="Published">Published</button>
-          <button type="button" class="chip" aria-pressed="false" data-f="Preprint">Preprints</button>
-          <button type="button" class="chip" aria-pressed="false" data-f="Under review">Under review</button>
-        </div>
-        <ul class="items" id="research-list">
-          <li data-status="Published">
-            <span class="title"><a href="https://doi.org/10.1049/sfw2/4364820">Domain-Driven Data and AI Platforms: Governing Analytics and Machine Learning Pipelines at Scale</a></span>
-            <span class="tag pub">IET Software · 2026</span>
-            <span class="meta">A domain-driven reference architecture for governing analytics and ML pipelines in large enterprises.</span>
-          </li>
-          <li data-status="Preprint">
-            <span class="title"><a href="https://doi.org/10.13140/RG.2.2.35761.34403">LEGATO: Agentic Large Language Model Translation of Legacy ETL Workflows to Modern Dataflow Code with Test-Based Semantic Verification</a></span>
-            <span class="tag pre">Preprint · 2026</span>
-            <span class="meta">An agent that translates legacy ETL into Spark and checks every translation against executable data tests.</span>
-          </li>
-          <li data-status="Preprint">
-            <span class="title"><a href="https://doi.org/10.2139/ssrn.7641619">Fix or Page? Silent Harm and Safe Escalation When LLM Agents Remediate Data Pipeline Incidents</a></span>
-            <span class="tag pre">Preprint · 2026</span>
-            <span class="meta">64 broken pipelines, three model sizes: data quality monitors approved every harmful fix, while the agents&#x27; own confidence was the useful safety signal.</span>
-          </li>
-          <li data-status="Preprint">
-            <span class="title"><a href="https://doi.org/10.2139/ssrn.7653558">When the Rules Collide: Explainability, Fairness, and Model Risk Governance in Credit Machine Learning</a></span>
-            <span class="tag pre">Preprint · 2026</span>
-            <span class="meta">A review of how fair lending law, model risk guidance and capital rules constrain one another in credit ML.</span>
-          </li>
-          <li data-status="Preprint">
-            <span class="title"><a href="https://doi.org/10.2139/ssrn.7653523">An Event-Driven Medallion Architecture with Domain-Driven Design for Training-Serving Consistent Credit Risk Feature Engineering</a></span>
-            <span class="tag pre">Preprint · 2026</span>
-            <span class="meta">Event-driven medallion pipelines that keep credit risk features consistent between training and serving.</span>
-          </li>
-          <li data-status="Preprint">
-            <span class="title"><a href="https://doi.org/10.2139/ssrn.7653520">Agent-Oriented Reference Architecture for Domain-Driven Enterprise Data Platforms</a></span>
-            <span class="tag pre">Preprint · 2026</span>
-            <span class="meta">A reference architecture for running AI agents over domain-owned enterprise data.</span>
-          </li>
-          <li data-status="Preprint">
-            <span class="title"><a href="https://www.researchgate.net/publication/416348559">Domain-Driven Governance for Regulated Lakehouses: A Contract-Based Architecture and Reproducible Evaluation on Snowflake</a></span>
-            <span class="tag pre">Preprint · 2026</span>
-            <span class="meta">Governance that propagates across domains, measured with a reproducible Snowflake benchmark.</span>
-          </li>
-          <li data-status="Preprint">
-            <span class="title"><a href="https://www.researchgate.net/publication/404468422">Proactive Credit Line Increase Using Risk-Constrained Explainable Machine Learning</a></span>
-            <span class="tag pre">Preprint · 2026</span>
-            <span class="meta">Credit line decisions as constrained profit maximization, with calibrated models, SHAP explanations and fairness limits. <span class="authors">A. Sharma, G. Sharma</span></span>
-          </li>
-          <li data-status="Preprint">
-            <span class="title"><a href="https://doi.org/10.2139/ssrn.6714178">FraudRAG: Knowledge Graph-Augmented Retrieval for Real-Time Financial Statement Fraud Detection Using a Domain-Driven Medallion Architecture</a></span>
-            <span class="tag pre">Preprint · 2026</span>
-            <span class="meta">A Graph-RAG pipeline combining a Neo4j knowledge graph and vector retrieval to check financial statements.</span>
-          </li>
-          <li data-status="Preprint">
-            <span class="title"><a href="https://doi.org/10.2139/ssrn.6297121">A Domain-Driven Reference Architecture for Scalable and Governed Data Systems in Regulated Enterprises</a></span>
-            <span class="tag pre">Preprint · 2026</span>
-            <span class="meta">The reference architecture behind domain-owned, governed data platforms in banking.</span>
-          </li>
-          <li data-status="Under review">
-            <span class="title">Risk-Aware FinOps Optimization Using Machine Learning in Regulated Multi-Cloud Environments</span>
-            <span class="tag">Under review · IIPEM 2026</span>
-            <span class="meta">Calibrated cost forecasts and tail-risk optimization for cloud spend under data residency rules. <span class="authors">G. Sharma, A. Sharma, S. A. Syed</span></span>
-          </li>
-          <li data-status="Under review">
-            <span class="title">Risk-Aware Self-Healing Cloud Infrastructure Using Agentic AI and Policy-Based Remediation for Regulated Financial Systems</span>
-            <span class="tag">Under review · ISASF 2026</span>
-            <span class="meta">Agents propose repairs; a deterministic policy gate decides what may run. <span class="authors">G. Sharma, A. Sharma, D. Singh</span></span>
-          </li>
-        </ul>
+        <div class="cards" id="research-cards"><!-- gen:research-cards --><article class="card"><div class="card-top"><span class="kind">Journal</span><span class="tag pub">Published</span></div><h3><span>IET Software</span></h3><p class="where">Wiley and the IET · 2026</p><ul><li><a href="https://doi.org/10.1049/sfw2/4364820">Domain-Driven Data and AI Platforms: Governing Analytics and Machine Learning Pipelines at Scale</a><span class="note">DOI 10.1049/sfw2/4364820</span></li></ul></article><article class="card"><div class="card-top"><span class="kind">Conference</span><span class="tag acc">Accepted</span></div><h3><a href="https://ieee-ccwc.org/">IEEE CCWC 2027</a></h3><p class="where">Las Vegas, Nevada · January 4–6, 2027</p><ul><li><a href="https://github.com/akshaysharma1088/governed-kg-retrieval">Bounded Contexts or Graph Communities? Partitioning Enterprise Knowledge Graphs for Governed Retrieval</a><span class="note">Code and data on GitHub</span></li></ul></article><article class="card"><div class="card-top"><span class="kind">Conference</span><span class="tag acc">Accepted</span></div><h3><span>ISASF 2026</span></h3><p class="where">Co-authored paper</p><ul><li><span>Risk-Aware Self-Healing Cloud Infrastructure Using Agentic AI and Policy-Based Remediation for Regulated Financial Systems</span><span class="note">G. Sharma, A. Sharma, D. Singh</span></li></ul></article><article class="card"><div class="card-top"><span class="kind">Conference</span><span class="tag">Under review</span></div><h3><span>IIPEM 2026</span></h3><p class="where">Co-authored paper</p><ul><li><span>Risk-Aware FinOps Optimization Using Machine Learning in Regulated Multi-Cloud Environments</span><span class="note">G. Sharma, A. Sharma, S. A. Syed</span></li></ul></article><article class="card wide"><div class="card-top"><span class="kind">Research</span><span class="tag pre">Preprint</span></div><h3><span>Preprints</span></h3><p class="where">9 papers · posted on SSRN and ResearchGate · 2026</p><ul><li><a href="https://doi.org/10.13140/RG.2.2.35761.34403">LEGATO: Agentic Large Language Model Translation of Legacy ETL Workflows to Modern Dataflow Code with Test-Based Semantic Verification</a><span class="note">ResearchGate</span></li><li><a href="https://doi.org/10.2139/ssrn.7641619">Fix or Page? Silent Harm and Safe Escalation When LLM Agents Remediate Data Pipeline Incidents</a><span class="note">SSRN</span></li><li><a href="https://doi.org/10.2139/ssrn.7653558">When the Rules Collide: Explainability, Fairness, and Model Risk Governance in Credit Machine Learning</a><span class="note">SSRN</span></li><li><a href="https://doi.org/10.2139/ssrn.7653523">An Event-Driven Medallion Architecture with Domain-Driven Design for Training-Serving Consistent Credit Risk Feature Engineering</a><span class="note">SSRN</span></li><li><a href="https://doi.org/10.2139/ssrn.7653520">Agent-Oriented Reference Architecture for Domain-Driven Enterprise Data Platforms</a><span class="note">SSRN</span></li><li><a href="https://www.researchgate.net/publication/416348559">Domain-Driven Governance for Regulated Lakehouses: A Contract-Based Architecture and Reproducible Evaluation on Snowflake</a><span class="note">ResearchGate</span></li><li><a href="https://www.researchgate.net/publication/404468422">Proactive Credit Line Increase Using Risk-Constrained Explainable Machine Learning</a><span class="note">ResearchGate · A. Sharma, G. Sharma</span></li><li><a href="https://doi.org/10.2139/ssrn.6714178">FraudRAG: Knowledge Graph-Augmented Retrieval for Real-Time Financial Statement Fraud Detection Using a Domain-Driven Medallion Architecture</a><span class="note">SSRN</span></li><li><a href="https://doi.org/10.2139/ssrn.6297121">A Domain-Driven Reference Architecture for Scalable and Governed Data Systems in Regulated Enterprises</a><span class="note">SSRN</span></li></ul></article><!-- /gen:research-cards --></div>
 
-        <p class="sub-h">Open benchmarks and code</p>
-        <div class="bench" id="bench">
-          <a href="https://github.com/akshaysharma1088/etl-transbench"><b>ETL-TransBench</b><span>32 legacy ETL translation tasks with executable oracles.</span><code>github.com/akshaysharma1088/etl-transbench</code><code>DOI 10.5281/zenodo.23307741</code></a>
-          <a href="https://github.com/akshaysharma1088/pipemend"><b>PipeMend</b><span>64 broken pipelines graded on whether the data is right afterwards.</span><code>github.com/akshaysharma1088/pipemend</code><code>DOI 10.5281/zenodo.23510784</code></a>
-          <a href="https://github.com/akshaysharma1088/pipeverify"><b>pipeverify</b><span>GitHub Action that checks pipeline changes against real data before they ship.</span><code>github.com/akshaysharma1088/pipeverify</code><code>DOI 10.5281/zenodo.23542277</code></a>
-          <a href="https://github.com/akshaysharma1088/lakehouse-governance-bench"><b>Lakehouse governance bench</b><span>Reproducible governance checks for Snowflake lakehouses.</span><code>github.com/akshaysharma1088/lakehouse-governance-bench</code></a>
-          <a href="https://github.com/akshaysharma1088/EDMD-Framework"><b>EDMD framework</b><span>Event-driven medallion pipelines for credit risk features.</span><code>github.com/akshaysharma1088/EDMD-Framework</code><code>DOI 10.5281/zenodo.23548441</code></a>
-          <a href="https://github.com/akshaysharma1088/Credit_Line_Determination"><b>Credit line determination</b><span>Risk-constrained, explainable credit line increase models.</span><code>github.com/akshaysharma1088/Credit_Line_Determination</code><code>DOI 10.5281/zenodo.23710023</code></a>
-          <a href="https://github.com/akshaysharma1088/fraudrag"><b>FraudRAG</b><span>Research prototype for evidence-grounded financial document checks.</span><code>github.com/akshaysharma1088/fraudrag</code></a>
-        </div>
+        <p class="sub-h">Open-source tools, benchmarks and code</p>
+        <div class="bench" id="bench"><!-- gen:bench --><a href="https://github.com/akshaysharma1088/dataranger"><b>DataRanger</b><span>Data repair agent that applies only the fixes it can prove against the source, and sends the rest to a person. Snowflake, dbt, DuckDB, GitHub Action, MCP. OpenSSF Best Practices badge.</span><code>github.com/akshaysharma1088/dataranger</code><code>DOI 10.5281/zenodo.23787418</code><span class="pypi">pip install dataranger</span></a><a href="https://github.com/akshaysharma1088/pipeverify"><b>pipeverify</b><span>Checks a pipeline change before it merges and returns pass, review or block. CLI, GitHub Action, dbt and Snowflake sources, MCP. OpenSSF Best Practices badge.</span><code>github.com/akshaysharma1088/pipeverify</code><code>DOI 10.5281/zenodo.23542277</code><span class="pypi">pip install pipeverify</span></a><a href="https://github.com/akshaysharma1088/dbt-dataranger"><b>dbt-dataranger</b><span>dbt package that reconciles a model with the raw table it was built from, day by day.</span><code>github.com/akshaysharma1088/dbt-dataranger</code></a><a href="https://github.com/akshaysharma1088/etl-transbench"><b>ETL-TransBench</b><span>32 legacy ETL translation tasks with executable oracles.</span><code>github.com/akshaysharma1088/etl-transbench</code><code>DOI 10.5281/zenodo.23307741</code></a><a href="https://github.com/akshaysharma1088/pipemend"><b>PipeMend</b><span>64 broken pipelines graded on whether the data is right afterwards.</span><code>github.com/akshaysharma1088/pipemend</code><code>DOI 10.5281/zenodo.23510784</code></a><a href="https://github.com/akshaysharma1088/lakehouse-governance-bench"><b>Lakehouse governance bench</b><span>Reproducible governance checks for Snowflake lakehouses.</span><code>github.com/akshaysharma1088/lakehouse-governance-bench</code></a><a href="https://github.com/akshaysharma1088/EDMD-Framework"><b>EDMD framework</b><span>Event-driven medallion pipelines for credit risk features.</span><code>github.com/akshaysharma1088/EDMD-Framework</code><code>DOI 10.5281/zenodo.23548441</code></a><a href="https://github.com/akshaysharma1088/Credit_Line_Determination"><b>Credit line determination</b><span>Risk-constrained, explainable credit line increase models.</span><code>github.com/akshaysharma1088/Credit_Line_Determination</code><code>DOI 10.5281/zenodo.23710023</code></a><a href="https://github.com/akshaysharma1088/fraudrag"><b>FraudRAG</b><span>Research prototype for evidence-grounded financial document checks.</span><code>github.com/akshaysharma1088/fraudrag</code></a><!-- /gen:bench --></div>
       </div>
     </div>
   </section>
@@ -722,29 +660,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         </ul>
         <div class="actions"><a class="btn primary" href="https://akshaysharma10.substack.com">Subscribe on Substack</a></div>
         <p class="sub-h">Articles in other publications</p>
-        <ul class="items" id="articles">
-          <li>
-            <span class="title"><a href="https://hackernoon.com/old-school-rules-vs-open-source-llms-a-three-round-fight-over-fake-bank-statements">Old-School Rules vs. Open-Source LLMs: A Three-Round Fight Over Fake Bank Statements</a></span>
-            <span class="tag pub">HackerNoon · Nov 2026</span>
-            <span class="meta">Tuned string rules against open-weights LLMs on doctored bank statements, and why the rules mostly won.</span>
-          </li>
-          <li>
-            <span class="title"><a href="https://medium.com/snowflake/from-support-transcripts-to-trusted-ai-agents-building-a-knowledge-architecture-with-snowflake-4569fe0ebd5a">From Support Transcripts to Trusted AI Agents: Building a Knowledge Architecture with Snowflake</a></span>
-            <span class="tag pub">Snowflake Builders Blog · Nov 2026</span>
-            <span class="meta">How to turn raw support transcripts into a governed knowledge layer in Snowflake that AI agents can trust.</span>
-          </li>
-          <li>
-            <span class="title"><a href="https://dev.to/akshaysharma10/beyond-sentiment-customer-intelligence-with-snowflake-cortex-ai-and-streamlit-280m">Beyond Sentiment: Customer Intelligence with Snowflake Cortex AI and Streamlit</a></span>
-            <span class="tag pub">DEV Community · Nov 2026</span>
-            <span class="meta">Classifying support messages by evidence of resolution, not sentiment, with Cortex AI_CLASSIFY and Streamlit in Snowflake.</span>
-          </li>
-          <li>
-            <span class="title"><a href="https://hackernoon.com/benchmarking-claude-haiku-sonnet-and-opus-on-64-broken-data-pipelines">Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines</a></span>
-            <span class="tag pub">HackerNoon · Nov 2026</span>
-            <span class="meta">Which model tier is worth paying for when AI agents repair data pipelines, and why every tier still needs verification.</span>
-          </li>
-        </ul>
-        <div class="actions"><a class="btn ghost" href="https://hackernoon.com/about/akshaysharma10">HackerNoon profile</a> <a class="btn ghost" href="https://dzone.com/users/5620337/akshaysharma1088.html">DZone profile</a> <a class="btn ghost" href="https://dev.to/akshaysharma10">DEV profile</a></div>
+        <div class="cards" id="outlet-cards"><!-- gen:outlet-cards --><article class="card"><div class="card-top"><span class="kind">Publication</span><span class="tag pub">Published</span></div><h3><a href="https://hackernoon.com/about/akshaysharma10">HackerNoon</a></h3><p class="where">3 articles · Author profile</p><ul><li><a href="https://hackernoon.com/how-to-evaluate-snowflake-cortex-embedding-models-for-enterprise-search">How to Evaluate Snowflake Cortex Embedding Models for Enterprise Search</a><span class="note">Nov 2026</span></li><li><a href="https://hackernoon.com/old-school-rules-vs-open-source-llms-a-three-round-fight-over-fake-bank-statements">Old-School Rules vs. Open-Source LLMs: A Three-Round Fight Over Fake Bank Statements</a><span class="note">Nov 2026</span></li><li><a href="https://hackernoon.com/benchmarking-claude-haiku-sonnet-and-opus-on-64-broken-data-pipelines">Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines</a><span class="note">Nov 2026</span></li></ul></article><article class="card"><div class="card-top"><span class="kind">Publication</span><span class="tag pub">Published</span></div><h3><a href="https://medium.com/snowflake">Snowflake Builders Blog</a></h3><p class="where">Snowflake&#x27;s community blog on Medium</p><ul><li><a href="https://medium.com/snowflake/from-support-transcripts-to-trusted-ai-agents-building-a-knowledge-architecture-with-snowflake-4569fe0ebd5a">From Support Transcripts to Trusted AI Agents: Building a Knowledge Architecture with Snowflake</a><span class="note">Nov 2026</span></li></ul></article><article class="card"><div class="card-top"><span class="kind">Publication</span><span class="tag pub">Published</span></div><h3><a href="https://dev.to/akshaysharma10">DEV Community</a></h3><p class="where">Author profile</p><ul><li><a href="https://dev.to/akshaysharma10/beyond-sentiment-customer-intelligence-with-snowflake-cortex-ai-and-streamlit-280m">Beyond Sentiment: Customer Intelligence with Snowflake Cortex AI and Streamlit</a><span class="note">Nov 2026</span></li></ul></article><article class="card"><div class="card-top"><span class="kind">Publication</span></div><h3><a href="https://dzone.com/users/5620337/akshaysharma1088.html">DZone</a></h3><p class="where">Author profile</p><ul><li><a href="https://dzone.com/users/5620337/akshaysharma1088.html">Articles on DZone</a><span class="note">See the author profile</span></li></ul></article><!-- /gen:outlet-cards --></div>
       </div>
     </div>
   </section>
@@ -753,36 +669,11 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     <div class="wrap block-grid">
       <p class="block-label">Community</p>
       <div>
-        <h2>Reviewing, judging and speaking</h2>
-        <div class="cols" style="margin-top:20px;">
-          <div>
-            <p class="sub-h" style="margin-top:0;">Reviewing and judging</p>
-            <ul class="plain" id="reviewing">
-              <li><a href="https://www.taimma-conf.org/">Technical Program Committee, TAIMMA 2027 (Springer CCIS)</a></li>
-              <li>Peer reviewer, IEEE Access and IEEE IT Professional (15 reviews)</li>
-              <li>Hackathon judge, including RevolutionUC, LA Hacks and FinBilim</li>
-              <li>Mentor, USC AI Hackathon</li>
-            </ul>
-            <p class="sub-h">Memberships and recognition</p>
-            <ul class="plain" id="memberships">
-              <li>IEEE Senior Member</li>
-              <li>Member, Institution of Engineering and Technology (IET)</li>
-              <li>UK Registered Design No. 6512069, AI-based device for cloud data security (2026, co-registered)</li>
-            </ul>
-          </div>
-          <div>
-            <p class="sub-h" style="margin-top:0;">Talks and workshops</p>
-            <ul class="plain" id="talks">
-              <li><a href="https://www.taimma-conf.org/">Invited keynote, TAIMMA 2027: &quot;When AI Agents Touch Production Data: Lessons from Building and Verifying LLM-Driven Data Systems&quot; (March 2027, online)</a></li>
-              <li>The Economist</li>
-              <li>Dreamforce</li>
-              <li>Snowflake workshop</li>
-              <li>USAII mentor workshop</li>
-              <li>Discover technical leader workshop</li>
-              <li>Keynote, hackathon in Cincinnati</li>
-            </ul>
-          </div>
-        </div>
+        <h2>Speaking, reviewing and judging</h2>
+        <p class="sub-h" style="margin-top:8px;">Speaking</p>
+        <div class="cards" id="speaking-cards"><!-- gen:speaking-cards --><article class="card"><div class="card-top"><span class="kind">Conference</span><span class="tag inv">Invited keynote</span></div><h3><a href="https://www.taimma-conf.org/">TAIMMA 2027</a></h3><p class="where">Online · March 27–28, 2027 · Springer CCIS</p><ul><li><a href="https://www.taimma-conf.org/">When AI Agents Touch Production Data: Lessons from Building and Verifying LLM-Driven Data Systems</a><span class="note">Also on the Technical Program Committee</span></li></ul></article><article class="card"><div class="card-top"><span class="kind">Conference</span><span class="tag inv">Talk</span></div><h3><a href="https://www.conf42.com/">Conf42 Chaos Engineering 2026</a></h3><p class="where">Online · December 2, 2026</p><ul><li><span>Your Monitors Approved Every Bad Fix: What Happened When AI Agents Repaired 64 Broken Pipelines</span><span class="note">Pre-recorded talk</span></li></ul></article><article class="card wide"><div class="card-top"><span class="kind">Talks</span></div><h3><span>Earlier talks and workshops</span></h3><p class="where">Industry and community events</p><ul><li><span>The Economist</span></li><li><span>Dreamforce</span></li><li><span>Snowflake workshop</span></li><li><span>USAII mentor workshop</span></li><li><span>Discover technical leader workshop</span></li><li><span>Keynote, hackathon in Cincinnati</span></li></ul></article><!-- /gen:speaking-cards --></div>
+        <p class="sub-h">Reviewing, judging and memberships</p>
+        <div class="cards" id="service-cards"><!-- gen:service-cards --><article class="card"><div class="card-top"><span class="kind">Journal</span><span class="tag">13 reviews</span></div><h3><span>IEEE Access</span></h3><p class="where">Peer reviewer</p></article><article class="card"><div class="card-top"><span class="kind">Magazine</span><span class="tag">3 reviews</span></div><h3><span>IEEE IT Professional</span></h3><p class="where">Peer reviewer</p></article><article class="card"><div class="card-top"><span class="kind">Conference</span><span class="tag">4 papers reviewed</span></div><h3><a href="https://www.taimma-conf.org/">TAIMMA 2027</a></h3><p class="where">Technical Program Committee · Springer CCIS</p></article><article class="card"><div class="card-top"><span class="kind">Hackathons</span><span class="tag">6 judged</span></div><h3><span>Judge and mentor</span></h3><p class="where">RevolutionUC, LA Hacks, FinBilim and others</p><ul><li><span>Mentor, USC AI Hackathon</span></li><li><span>Technical mentor, CodePath</span></li></ul></article><article class="card"><div class="card-top"><span class="kind">Membership</span></div><h3><span>IEEE and IET</span></h3><p class="where">Professional bodies</p><ul><li><span>IEEE Senior Member</span></li><li><span>Member, Institution of Engineering and Technology (IET)</span></li></ul></article><article class="card"><div class="card-top"><span class="kind">Recognition</span></div><h3><span>UK Registered Design</span></h3><p class="where">No. 6512069 · 2026, co-registered</p><ul><li><span>AI-based device for cloud data security</span></li></ul></article><!-- /gen:service-cards --></div>
       </div>
     </div>
   </section>
@@ -839,45 +730,38 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function link(url, text) { if (!url) return el('span', null, text); var a = el('a', null, text); a.href = url; return a; }
   function fill(id, nodes) { var box = document.getElementById(id); if (!box) return; box.textContent = ''; nodes.forEach(function (n) { box.appendChild(n); }); }
-  var tagClass = { 'Published': 'tag pub', 'Preprint': 'tag pre', 'Under review': 'tag' };
-
-  // Research filter
-  var current = 'All';
-  function applyFilter() {
-    document.querySelectorAll('#research-list li').forEach(function (li) {
-      li.hidden = current !== 'All' && li.getAttribute('data-status') !== current;
-    });
-    document.querySelectorAll('.filters .chip').forEach(function (c) { c.setAttribute('aria-pressed', String(c.getAttribute('data-f') === current)); });
+  function tagClassFor(st) {
+    if (!st) return null;
+    if (st === 'Published') return 'tag pub';
+    if (st === 'Preprint') return 'tag pre';
+    if (st === 'Accepted') return 'tag acc';
+    if (/keynote|Talk/i.test(st)) return 'tag inv';
+    return 'tag';
   }
-  document.querySelectorAll('.filters .chip').forEach(function (c) {
-    c.addEventListener('click', function () { current = c.getAttribute('data-f'); applyFilter(); });
-  });
-  // tag the static fallback items so filters work before data.json loads
-  document.querySelectorAll('#research-list li').forEach(function (li) {
-    var t = li.querySelector('.tag'); if (!t) return;
-    var s = t.textContent.indexOf('Preprint') === 0 ? 'Preprint' : t.textContent.indexOf('Under review') === 0 ? 'Under review' : 'Published';
-    li.setAttribute('data-status', s);
-  });
-
+  function card(c) {
+    var a = el('article', 'card' + (c.wide ? ' wide' : ''));
+    var top = el('div', 'card-top'); top.appendChild(el('span', 'kind', c.kind));
+    if (c.status) top.appendChild(el('span', tagClassFor(c.status), c.status));
+    a.appendChild(top);
+    var h = el('h3'); h.appendChild(link(c.url, c.name)); a.appendChild(h);
+    if (c.meta) a.appendChild(el('p', 'where', c.meta));
+    if (c.items && c.items.length) {
+      var ul = el('ul');
+      c.items.forEach(function (it) { var li = el('li'); li.appendChild(link(it.url, it.title)); if (it.note) li.appendChild(el('span', 'note', it.note)); ul.appendChild(li); });
+      a.appendChild(ul);
+    }
+    return a;
+  }
   function renderData(d) {
     if (d.runlog) fill('runlog', d.runlog.map(function (r) { var li = el('li'); li.appendChild(el('time', null, r.date)); li.appendChild(el('span', null, r.text)); return li; }));
-    if (d.research) {
-      fill('research-list', d.research.map(function (p) {
-        var li = el('li'); li.setAttribute('data-status', p.status);
-        var t = el('span', 'title'); t.appendChild(link(p.url, p.title)); li.appendChild(t);
-        var label = p.status === 'Published' ? [p.venue, p.year].filter(Boolean).join(' · ') : p.status === 'Preprint' ? 'Preprint · ' + p.year : ['Under review', p.venue].filter(Boolean).join(' · ');
-        li.appendChild(el('span', tagClass[p.status] || 'tag', label));
-        var m = el('span', 'meta', p.summary); if (p.authors) { m.appendChild(document.createTextNode(' ')); m.appendChild(el('span', 'authors', p.authors)); } li.appendChild(m);
-        return li;
-      }));
-      applyFilter();
-    }
+    [['research_cards', 'research-cards'], ['outlet_cards', 'outlet-cards'], ['speaking_cards', 'speaking-cards'], ['service_cards', 'service-cards']].forEach(function (p) { if (d[p[0]]) fill(p[1], d[p[0]].map(card)); });
     if (d.benchmarks) {
       fill('bench', d.benchmarks.map(function (b) {
         var a = el('a'); a.href = 'https://github.com/' + b.repo;
         a.appendChild(el('b', null, b.name)); a.appendChild(el('span', null, b.summary));
         a.appendChild(el('code', null, 'github.com/' + b.repo));
         if (b.doi) a.appendChild(el('code', null, 'DOI ' + b.doi));
+        if (b.pypi) a.appendChild(el('span', 'pypi', 'pip install ' + b.pypi));
         var s = el('span', 'stats'); s.setAttribute('data-repo', b.repo); a.appendChild(s);
         return a;
       }));
@@ -891,13 +775,6 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       li.appendChild(div); return li;
     }));
     if (d.skills) fill('skills', d.skills.map(function (s) { return el('span', 'tag', s); }));
-    if (d.articles) fill('articles', d.articles.map(function (a) {
-      var li = el('li'); var t = el('span', 'title'); t.appendChild(link(a.url, a.title)); li.appendChild(t);
-      li.appendChild(el('span', 'tag pub', [a.outlet, a.date].filter(Boolean).join(' · ')));
-      if (a.summary) li.appendChild(el('span', 'meta', a.summary));
-      return li;
-    }));
-    ['reviewing', 'memberships', 'talks'].forEach(function (k) { if (d[k]) fill(k, d[k].map(function (t) { var li = el('li'); if (typeof t === 'string') li.textContent = t; else li.appendChild(link(t.url, t.text)); return li; })); });
   }
 
   // Live GitHub stats for each benchmark card (public API, no key needed).
