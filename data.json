@@ -3,6 +3,10 @@
   "runlog": [
     {
       "date": "Nov 2026",
+      "text": "Ranked #3 Top AI Writer on HackerNoon"
+    },
+    {
+      "date": "Nov 2026",
       "text": "DataRanger and pipeverify earn the OpenSSF Best Practices badge; dbt package released"
     },
     {
@@ -28,10 +32,6 @@
     {
       "date": "Nov 2026",
       "text": "Published on HackerNoon: Benchmarking Claude Haiku, Sonnet, and Opus on 64 Broken Data Pipelines"
-    },
-    {
-      "date": "Oct 2026",
-      "text": "Invited keynote at TAIMMA 2027 and joined its Technical Program Committee"
     }
   ],
   "research_cards": [
@@ -213,8 +213,8 @@
       "kind": "Publication",
       "name": "HackerNoon",
       "url": "https://hackernoon.com/about/akshaysharma10",
-      "meta": "3 articles · Author profile",
-      "status": "Published",
+      "meta": "3 articles · #3 Top AI Writer, November 2026",
+      "status": "Top writer",
       "items": [
         {
           "title": "How to Evaluate Snowflake Cortex Embedding Models for Enterprise Search",
